@@ -267,7 +267,7 @@ a {
 
 #fia-logo-header {
   width: 36px;
-  height: max-content;
+  height: fit-content;
   opacity: 40%;
   margin: 12px 0;
   cursor: pointer;

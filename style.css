@@ -5,6 +5,10 @@ html, body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  cursor: default;
+}
+
+a {
   text-decoration: none;
 }
 
@@ -150,6 +154,39 @@ html, body {
   border-top-left-radius: 16px;
 }
 
+.main-header {
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+.main-header p {
+  margin: 0 12px;
+}
+
+.main-header > .times {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-header > .times tr {
+  background-color: #1a2e5a;
+  color: #fff;
+}
+
+.main-header > .times tr:nth-child(2) {
+  background-color: #3e4f7c;
+}
+
+.main-header > .times td {
+  padding: 0 6px;
+}
+
+.main-header.border-connected {
+  border-left: #1a2e5a 4px solid;
+  border-bottom: #1a2e5a 4px solid;
+  border-bottom-left-radius: 16px;
+}
+
 .main-content > div.latest {
   height: fit-content;
   display: flex;
@@ -219,4 +256,24 @@ html, body {
 
 .latest-content {
   font-size: 18px;
+}
+
+.content {
+  margin-top: 36px;
+}
+
+.content > .cards {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.content > .cards * {
+  cursor: pointer;
+}
+
+.content > p.title {
+  font-size: 28px;
+  margin: 0 auto;
 }

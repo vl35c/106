@@ -62,8 +62,16 @@ html, body {
   height: 80%;
 }
 
-.header-content > .page-title {
-  font-size: 32px;  
+@media screen and (min-width: 0px) {
+  .header-content > .page-title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-content > .page-title {
+    font-size: 32px;
+  }
 }
 
 .subheader {
@@ -95,7 +103,18 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 18px;
+}
+
+@media screen and (min-width: 0px) {
+  .subheader-nav-link {
+    padding: 0 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subheader-nav-link {
+    padding: 0 18px;
+  }
 }
 
 .subheader-nav-link p {
@@ -142,26 +161,56 @@ html, body {
 
 .latest-card {
   flex: auto;
-  max-width: 33%;
   height: 360px;
   box-shadow: 0 0 0 1px #1a2e5a inset;
   border-radius: 12px;
 }
 
-.latest-card  * {
+@media screen and (min-width: 0px) {
+  .latest-card {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .latest-card {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .latest-card {
+    max-width: 33%;
+  }
+}
+
+.latest-card * {
   margin: 12px;
 }
 
 .latest-header {
+  background-color: #1a2e5a;
+  margin: 0;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.latest-header-content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: #1a2e5a 1px solid;
+  gap: 0 12px;
+  margin: 0 24px;
+}
+
+.latest-header-content > * {
+  margin: 12px 0;
+  color: #fff;
 }
 
 .latest-header > p.title {
-  font-size: 22px;
   font-family: TitilliumWebSemiBold;
+  font-size: 22px;
 }
 
 .latest-header > p.date {

@@ -163,17 +163,21 @@ a {
 }
 
 .current-class {
-  margin-left: 24px;
+  margin-left: 12px;
   font-size: 18px;
-  box-shadow: 0 0 0 2px #1a2e5a inset;
-  border-radius: 8px;
   width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 24px;
+  margin-bottom: 12px;
 }
 
 .current-class p {
   margin: 0;
   padding: 8px;
-  margin-bottom: 12px;
+  box-shadow: 0 0 0 2px #1a2e5a inset;
+  border-radius: 8px;
 }
 
 .main-header {
@@ -195,7 +199,7 @@ a {
   color: #fff;
 }
 
-.main-header > .times tr:nth-child(2) {
+.main-header > .times tr:nth-child(even) {
   background-color: #3e4f7c;
 }
 
@@ -330,13 +334,17 @@ a {
   border-radius: 8px;
 }
 
-.side-content > .list p {
+.side-content > .list p, .side-content > .list a {
   margin: 0 12px;
   cursor: pointer;
 }
 
+.side-content > .list a {
+  display: block;
+}
+
 .focused-content {
-  flex: 1 0 auto;
+  flex: auto;
   height: fit-content;
 }
 
@@ -345,11 +353,7 @@ a {
   height: fit-content;
 }
 
-.content-item > * {
-  margin: 12px;
-}
-
-.content-item p {
+.item-header p {
   font-size: 24px;
 }
 
@@ -360,4 +364,52 @@ a {
 
 .content-border > * {
   margin: 12px;
+}
+
+.item-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content-item > * > * {
+  margin: 12px;
+}
+
+.item-header img {
+  height: 80px;
+}
+
+.item-content table {
+  text-align: center;
+  font-size: 18px;
+  border-collapse: collapse;
+}
+
+.item-content table * {
+  padding: 2px 4px;
+  border: rgba(255, 255, 255, 0.4) 1px solid;
+}
+
+.item-content table #io {
+  background-color: #27272e;
+}
+
+.item-content table td {
+  min-width: 16px;
+}
+
+.item-content > .container {
+  display: flex;
+  flex-direction: row;
+  gap: 0 36px;
+  align-items: baseline;
+}
+
+.item-content img {
+  max-height: 100px;
+}
+
+.item-content img.large {
+  max-height: 140px;
 }

@@ -76,7 +76,7 @@ a {
 
 @media screen and (min-width: 0px) {
   .header-content > .page-title {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -293,6 +293,7 @@ a {
 }
 
 .latest-content img {
+  height: 80%;
   max-height: 140px;
   align-self: center;
 }
@@ -363,8 +364,21 @@ a {
 }
 
 .focused-content {
-  flex: auto;
   height: fit-content;
+}
+
+@media screen and (min-width: 0px) {
+  .focused-content {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .focused-content {
+    flex: auto;
+    width: auto;
+  }
 }
 
 .content-item {

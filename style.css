@@ -162,6 +162,20 @@ a {
   border-top-left-radius: 16px;
 }
 
+.current-class {
+  margin-left: 24px;
+  font-size: 18px;
+  box-shadow: 0 0 0 2px #1a2e5a inset;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.current-class p {
+  margin: 0;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
 .main-header {
   padding-bottom: 12px;
   width: fit-content;
@@ -289,7 +303,7 @@ a {
 
 .content > p.title {
   font-size: 28px;
-  margin: 0 auto;
+  margin: 0 inherit;
 }
 
 .content-container {
@@ -337,4 +351,13 @@ a {
 
 .content-item p {
   font-size: 24px;
+}
+
+.content-border {
+  border: #1a2e5a 4px solid;
+  border-radius: 16px;
+}
+
+.content-border > * {
+  margin: 12px;
 }

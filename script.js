@@ -17,8 +17,7 @@ var timetable = {
     10: "CS104 - GH514"
   },
   3: {
-    10: "CS101 - RC426",
-    15: "CS102 - JB816"
+    10: "CS101 - RC426"
   },
   4: {
     9: "MS113 - JA325"
@@ -38,13 +37,21 @@ function getTime() {
   let hour = d.getHours();
 
   let element = document.getElementById("current-class-data");
+  let element2 = document.getElementById("next-class-data");
 
   if (day in timetable) {
     if (hour in timetable[day]) {
       var text = `${dayName[day]} ${hour}:00-${hour+1}:00<br>${timetable[day][hour]}`;
       element.innerHTML = text;
     } else {
-      element.parentElement.style.display = "none";
+      element.style.display = "none";
+    }
+
+    if (hour + 1 in timetable[day]) {
+      var text = `${dayName[day]} ${hour+1}:00-${hour+2}:00<br>${timetable[day][hour+1]}`;
+      element2.innerHTML = text;
+    } else {
+      element2.style.display = "none";
     }
   }
 }

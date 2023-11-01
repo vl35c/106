@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/58125ddddb.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="getTime()">
     <div class="page">
       <div class="header">
         <div class="header-content">
@@ -19,14 +20,17 @@
         <div class="subheader-content">
           <a href="index.html" class="subheader-nav-link active"><p>Home</p></a>
           <a href="pages/101/101.html" class="subheader-nav-link"><p>101</p></a>
-          <div class="subheader-nav-link"><p>103</p></div>
-          <div class="subheader-nav-link"><p>104</p></div>
-          <div class="subheader-nav-link"><p>105</p></div>
+          <a href="pages/103/103.html" class="subheader-nav-link"><p>103</p></a>
+          <a href="pages/104/104.html" class="subheader-nav-link"><p>104</p></a>
+          <a href="pages/105/105.html" class="subheader-nav-link"><p>105</p></a>
           <a href="pages/106/106.html" class="subheader-nav-link"><p>106</p></a>
         </div>
       </div>
       <div class="main">
         <div class="main-content">
+          <div class="current-class">
+            <p id="current-class-data"></p>
+          </div>
           <p class="latest">LATEST</p>
           <div class="latest">
             <div class="latest-card">

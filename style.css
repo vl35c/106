@@ -288,6 +288,13 @@ a {
 
 .latest-content {
   font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.latest-content img {
+  max-height: 140px;
+  align-self: center;
 }
 
 .content {

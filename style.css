@@ -332,6 +332,18 @@ a {
   border-radius: 8px;
 }
 
+@media screen and (min-width: 0px) {
+  .side-content {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .side-content {
+    display: block;
+  }
+}
+
 .side-content > * {
   margin: 12px;
 }

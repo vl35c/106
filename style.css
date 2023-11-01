@@ -17,6 +17,7 @@ html, body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 @font-face {
@@ -289,4 +290,51 @@ a {
 .content > p.title {
   font-size: 28px;
   margin: 0 auto;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-top: 12px;
+}
+
+.side-content {
+  flex: none;
+  width: 300px;
+  height: fit-content;
+  background-color: #1a2e5a;
+  border-radius: 8px;
+}
+
+.side-content > * {
+  margin: 12px;
+}
+
+.side-content > .list {
+  background-color: #16161d;
+  border-radius: 8px;
+}
+
+.side-content > .list p {
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.focused-content {
+  flex: 1 0 auto;
+  height: fit-content;
+}
+
+.content-item {
+  border: #1a2e5a 1px solid;
+  height: fit-content;
+}
+
+.content-item > * {
+  margin: 12px;
+}
+
+.content-item p {
+  font-size: 24px;
 }

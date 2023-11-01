@@ -32,18 +32,174 @@
             <div class="side-content">
               <p>FUNDAMENTAL GATES</p>
               <div class="list">
-                <p>not</p>
-                <p>and</p>
-                <p>or</p>
-                <p>xor</p>
-                <p>nand</p>
-                <p>nor</p>
-                <p>xnor</p>
+                <a href="#not">not</a>
+                <a href="#and">and</a>
+                <a href="#or">or</a>
+                <a href="#nand">nand</a>
+                <a href="#nor">nor</a>
+                <a href="#xor">xor</a>
+                <a href="#xnor">xnor</a>
               </div>
             </div>
             <div class="focused-content">
-              <div class="content-item">
-                <p>NOT GATE</p>
+              <div class="content-item" id="not">
+                <div class="item-header">
+                  <p>NOT GATE</p>
+                  <img src="../../images/main/cs106/syrup/not-gate.png" alt="not-gate">
+                </div>
+                <div class="item-content">
+                  <p>A not gate - often denoted ! - is the most simple gate, taking in 1 input, and returning the opposite.</p>
+                  <p>Truth Table:</p>
+                  <table cellspacing="0">
+                    <tr><th>Input</th><th id="io">Output</th></tr>
+                    <tr><td>0</td><td id="io">1</td></tr>
+                    <tr><td>1</td><td id="io">0</td></tr>
+                  </table>
+                </div>
+              </div>
+              <div class="content-item" id="and">
+                <div class="item-header">
+                  <p>AND GATE</p>
+                  <img src="../../images/main/cs106/syrup/and-gate.png" alt="and-gate">
+                </div>
+                <div class="item-content">
+                  <p>An and gate - often denoted & - is a gate which takes in two inputs and returns 1 if <span class="semi-bold-text">both</span> inputs are also 1.</p>
+                  <p>Truth Table:</p>
+                  <table cellspacing="0">
+                    <tr><th>x</th><th>y</th><th id="io">z</th></tr>
+                    <tr><td>0</td><td>0</td><td id="io">0</td></tr>
+                    <tr><td>0</td><td>1</td><td id="io">0</td></tr>
+                    <tr><td>1</td><td>0</td><td id="io">0</td></tr>
+                    <tr><td>1</td><td>1</td><td id="io">1</td></tr>
+                  </table>
+                </div>
+              </div>
+              <div class="content-item" id="or">
+                <div class="item-header">
+                  <p>OR GATE</p>
+                  <img src="../../images/main/cs106/syrup/or-gate.png" alt="or-gate">
+                </div>
+                <div class="item-content">
+                  <p>An or gate - often denoted | - is a gate which takes in two inputs and returns 1 if <span class="semi-bold-text">either</span> input is 1.</p>
+                  <p>Truth Table:</p>
+                  <table cellspacing="0">
+                    <tr><th>x</th><th>y</th><th id="io">z</th></tr>
+                    <tr><td>0</td><td>0</td><td id="io">0</td></tr>
+                    <tr><td>0</td><td>1</td><td id="io">1</td></tr>
+                    <tr><td>1</td><td>0</td><td id="io">1</td></tr>
+                    <tr><td>1</td><td>1</td><td id="io">1</td></tr>
+                  </table>
+                </div>
+              </div>
+              <div class="content-item" id="nand">
+                <div class="item-header">
+                  <p>NAND GATE</p>
+                  <img src="../../images/main/cs106/syrup/nand-gate.png" alt="nand-gate">
+                </div>
+                <div class="item-content">
+                  <p>A nand gate is a <span class="semi-bold-text">negated and</span> gate. What this means is the output is just the output from an and gate flipped.</p>
+                  <div class="container">
+                    <div>
+                      <p>Truth Table:</p>
+                    <table cellspacing="0">
+                      <tr><th>x</th><th>y</th><th id="io">z</th></tr>
+                      <tr><td>0</td><td>0</td><td id="io">1</td></tr>
+                      <tr><td>0</td><td>1</td><td id="io">1</td></tr>
+                      <tr><td>1</td><td>0</td><td id="io">1</td></tr>
+                      <tr><td>1</td><td>1</td><td id="io">0</td></tr>
+                    </table>
+                    </div>
+                    <div>
+                      <p>Here is a diagram showing how nand is constructed:</p>
+                      <img src="../../images/main/cs106/syrup/nand-construction.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-item" id="nor">
+                <div class="item-header">
+                  <p>NOR GATE</p>
+                  <img src="../../images/main/cs106/syrup/nor-gate.png" alt="nor-gate">
+                </div>
+                <div class="item-content">
+                  <p>A nor gate is a <span class="semi-bold-text">negated or</span> gate. What this means is the output is just the output from an or gate flipped.</p>
+                  <div class="container">
+                    <div>
+                      <p>Truth Table:</p>
+                    <table cellspacing="0">
+                      <tr><th>x</th><th>y</th><th id="io">z</th></tr>
+                      <tr><td>0</td><td>0</td><td id="io">1</td></tr>
+                      <tr><td>0</td><td>1</td><td id="io">0</td></tr>
+                      <tr><td>1</td><td>0</td><td id="io">0</td></tr>
+                      <tr><td>1</td><td>1</td><td id="io">0</td></tr>
+                    </table>
+                    </div>
+                    <div>
+                      <p>Here is a diagram showing how nor is constructed:</p>
+                      <img src="../../images/main/cs106/syrup/nor-construction.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-item" id="xor">
+                <div class="item-header">
+                  <p>XOR GATE</p>
+                  <img src="../../images/main/cs106/syrup/xor-gate.png" alt="xor-gate">
+                </div>
+                <div class="item-content">
+                  <p>An xor gate is a <span class="semi-bold-text">exclusive or</span> gate. When we use the word "or" in english, we normally are talking about
+                  <span class="semi-bold-text">exclusive</span> or. This means when we have choice A or B, it means one or the other. In computing, an or gate
+                  is inclusive, meaning both options is also valid. xor is the "one or the other gate" - either but not both.</p>
+                  <div class="container">
+                    <div>
+                      <p>Truth Table:</p>
+                    <table cellspacing="0">
+                      <tr><th>x</th><th>y</th><th id="io">z</th></tr>
+                      <tr><td>0</td><td>0</td><td id="io">0</td></tr>
+                      <tr><td>0</td><td>1</td><td id="io">1</td></tr>
+                      <tr><td>1</td><td>0</td><td id="io">1</td></tr>
+                      <tr><td>1</td><td>1</td><td id="io">0</td></tr>
+                    </table>
+                    </div>
+                    <div>
+                      <p>Here is a diagram showing how nor is constructed:</p>
+                      <img src="../../images/main/cs106/syrup/xor-construction.png" class="large">
+                      <p>In this example, we don't use a nand gate, however it could be substituted in, but it also useful to know how
+                        to make the gate from just "and", "or", and "not".
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-item" id="xnor">
+                <div class="item-header">
+                  <p>XNOR GATE</p>
+                  <img src="../../images/main/cs106/syrup/xnor-gate.png" alt="xnor-gate">
+                </div>
+                <div class="item-content">
+                  <p>An xnor gate is an <span class="semi-bold-text">exclusive negated or</span> gate. The easiest way to construct this gate, is to
+                  just negate the xor gate we made previously. The xnor gate tests if both inputs are the same.</p>
+                  <div class="container">
+                    <div>
+                      <p>Truth Table:</p>
+                    <table cellspacing="0">
+                      <tr><th>x</th><th>y</th><th id="io">z</th></tr>
+                      <tr><td>0</td><td>0</td><td id="io">1</td></tr>
+                      <tr><td>0</td><td>1</td><td id="io">0</td></tr>
+                      <tr><td>1</td><td>0</td><td id="io">0</td></tr>
+                      <tr><td>1</td><td>1</td><td id="io">1</td></tr>
+                    </table>
+                    </div>
+                    <div>
+                      <p>There are two obvious ways to construct an xnor gate. The first is to create an xor gate, and then gate the output:</p>
+                      <img src="../../images/main/cs106/syrup/xnor-construction-1.png" class="large">
+                      <p>The other option would be to take either both or neither - by using two "and"s, one with the normal inputs, and one with
+                        the negated ones, then feeding those both into an "or" - as shown below.
+                      </p>
+                      <img src="../../images/main/cs106/syrup/xnor-construction-2.png" class="large">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

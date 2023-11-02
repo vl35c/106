@@ -454,3 +454,13 @@ a {
     max-height: 140px;
   }
 }
+
+.item-content p.example-code {
+  background-color: #27272e;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 6px;
+  border: #111 1px solid;
+  font-family: 'Lucida Sans';
+  color: #ddd;
+}

@@ -40,6 +40,12 @@
                 <a href="#xor">xor</a>
                 <a href="#xnor">xnor</a>
               </div>
+              <p>OTHER USEFUL GATES</p>
+              <div class="list">
+                <a href="#mux">mux</a>
+                <a href="#hadd">hadd</a>
+                <a href="#fadd">fadd</a>
+              </div>
             </div>
             <div class="focused-content">
               <div class="content-item" id="not">
@@ -197,6 +203,130 @@
                         the negated ones, then feeding those both into an "or" - as shown below.
                       </p>
                       <img src="../../images/main/cs106/syrup/xnor-construction-2.png" class="large">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-item" id="mux">
+                <div class="item-header">
+                  <p>MUX</p>
+                </div>
+                <div class="item-content">
+                  <p></p>
+                  <div class="container">
+                    <div>
+                      <p>Truth Table:</p>
+                    <table cellspacing="0">
+                      <tr><th>c</th><th>x</th><th>y</th><th id="io">z</th></tr>
+                      <tr><td>0</td><td>0</td><td>0</td><td id="io">0</td></tr>
+                      <tr><td>0</td><td>0</td><td>1</td><td id="io">0</td></tr>
+                      <tr><td>0</td><td>1</td><td>0</td><td id="io">1</td></tr>
+                      <tr><td>0</td><td>1</td><td>1</td><td id="io">1</td></tr>
+                      <tr><td>1</td><td>0</td><td>0</td><td id="io">0</td></tr>
+                      <tr><td>1</td><td>0</td><td>1</td><td id="io">1</td></tr>
+                      <tr><td>1</td><td>1</td><td>0</td><td id="io">0</td></tr>
+                      <tr><td>1</td><td>1</td><td>1</td><td id="io">1</td></tr>
+                    </table>
+                    </div>
+                    <div>
+                      <p>This is our first circuit which takes 3 inputs. Mux is short for multiplexer, which is another name for 
+                        a data selector. The first cable, labelled c, is the control cable. This cable tells the circuit which of the
+                        other two inputs to output. If the control cable is zero, we output x, and if the control cable is one, then we
+                        output y. The colour of the cables is just to distinguish them from each other.
+                      </p>
+                      <img src="../../images/main/cs106/syrup/mux-construction.png" class="large" alt="mux">
+                      <p>Example Code:</p>
+                      <p class="example-code">
+                        mux(&lt;Bit&gt;,&lt;Bit&gt;,&lt;Bit&gt;) -&gt; &lt;Bit&gt;<br>
+                        mux(c,x,y) = z where<br>
+                        &nbsp;z = (!c & x) | (c & y)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-item" id="hadd">
+                <div class="item-header">
+                  <p>HADD</p>
+                </div>
+                <div class="item-content">
+                  <p></p>
+                  <div class="container">
+                    <div>
+                      <p>Truth Table:</p>
+                    <table cellspacing="0">
+                      <tr><th>ib10</th><th>ib11</th><th id="io">ob2</th><th id="io">ob1</th></tr>
+                      <tr><td>0</td><td>0</td><td id="io">0</td><td id="io">0</td></tr>
+                      <tr><td>0</td><td>1</td><td id="io">0</td><td id="io">1</td></tr>
+                      <tr><td>1</td><td>0</td><td id="io">0</td><td id="io">1</td></tr>
+                      <tr><td>1</td><td>1</td><td id="io">1</td><td id="io">0</td></tr>
+                    </table>
+                    </div>
+                    <div>
+                      <p>
+                        The hadd (half adder) is a circuit which takes in 2 bits and adds them together. The largest value this can return is 2, which
+                        cannot fit in a single bit, so we need to return bits to store the value.<br><br>
+                        The naming convention used is (?identifier)(type)(significance)(?index) - Let's break that down. The identifier is not
+                        always used - only when needed. In this case we differentiate between the input and the output, so we use "i" and "o"
+                        as the identifiers. Then we have the type - in this case we are dealing with bits, so we use "b". We then have the
+                        significance. Both inputs are 1's bits, so they have a significance of 1, whereas the output has a 1 and a 2's bit, hence
+                        the 1 and 2. Lastly we have the index. We have multiple 1's bits in the input, so we put an index on the end to tell them apart.
+                        Decoding an example we get:<br>
+                        ib10 = first 1's bit from the input (input bit 1 0)<br>
+                        ob2 = 2's bit in the output (output bit 2).<br>
+                        This convention is used, instead of ambiguous names such as a,b,c etc.
+                      </p>
+                      <img src="../../images/main/cs106/syrup/hadd-construction.png" class="large" alt="hadd">
+                      <p>Example Code:</p>
+                      <p class="example-code">
+                        hadd(&lt;Bit&gt;,&lt;Bit&gt;) -&gt; &lt;Bit&gt;,&lt;Bit&gt;<br>
+                        hadd(ib10,ib11) = ob2,ob1 where<br>
+                        &nbsp;ob1 = xor(ib10,ib11)<br>
+                        &nbsp;ob2 = ib10 & ib11
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-item" id="fadd">
+                <div class="item-header">
+                  <p>FADD</p>
+                </div>
+                <div class="item-content">
+                  <p></p>
+                  <div class="container">
+                    <div>
+                      <p>Truth Table:</p>
+                    <table cellspacing="0">
+                      <tr><th>ib10</th><th>ib11</th><th>ib12</th><th id="io">ob2</th><th id="io">ob1</th></tr>
+                      <tr><td>0</td><td>0</td><td>0</td><td id="io">0</td><td id="io">0</td></tr>
+                      <tr><td>0</td><td>0</td><td>1</td><td id="io">0</td><td id="io">1</td></tr>
+                      <tr><td>0</td><td>1</td><td>0</td><td id="io">0</td><td id="io">1</td></tr>
+                      <tr><td>0</td><td>1</td><td>1</td><td id="io">1</td><td id="io">0</td></tr>
+                      <tr><td>1</td><td>0</td><td>0</td><td id="io">0</td><td id="io">1</td></tr>
+                      <tr><td>1</td><td>0</td><td>1</td><td id="io">1</td><td id="io">0</td></tr>
+                      <tr><td>1</td><td>1</td><td>0</td><td id="io">1</td><td id="io">0</td></tr>
+                      <tr><td>1</td><td>1</td><td>1</td><td id="io">1</td><td id="io">1</td></tr>
+                    </table>
+                    </div>
+                    <div>
+                      <p>
+                        The fadd (full adder) is a circuit which takes in three inputs and adds them together. We still only
+                        need 2 output bits, as the greatest value we can get is 3 (11). This time we take in two 1 bit inputs,
+                        and a carry bit.<br>
+                        Note - the order of cables coming out of the boxes is the same as the order when the function was defined. In
+                        this case the first hadd has a red and blue cable, the red being the 2's and the blue being the 1's bit.
+                      </p>
+                      <img src="../../images/main/cs106/syrup/fadd-construction.png" class="large" alt="fadd">
+                      <p>Example Code:</p>
+                      <p class="example-code">
+                        fadd(&lt;Bit&gt;,&lt;Bit&gt;,&lt;Bit&gt;) -&gt; &lt;Bit&gt;,&lt;Bit&gt;<br>
+                        fadd(ib10,ib11,c) = ob2,ob1 where<br>
+                        &nbsp;c20,b10 = hadd(ib10,ib11)<br>
+                        &nbsp;c21,ob1 = hadd(c,b10)<br>
+                        &nbsp;ob2 = xor(c20,c21)
+                      </p>
+                      <p>c - carry</p>
                     </div>
                   </div>
                 </div>

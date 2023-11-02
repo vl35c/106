@@ -31,6 +31,10 @@ var timetable = {
   }
 }
 
+Date.prototype.getUnixTime = function() { return this.getTime()/1000|0 };
+if(!Date.now) Date.now = function() { return new Date(); }
+Date.time = function() { return Date.now().getUnixTime(); }
+
 function getTime() {
   const d = new Date();
   let day = d.getDay();
@@ -55,4 +59,30 @@ function getTime() {
       element2.style.display = "none";
     }
   }
+}
+
+function getTimeUntilDue() {
+  elements = document.getElementsByClassName("js-time-until-due");
+  for (e of elements) {
+    const [time, date] = e.parentElement.children[0].innerHTML.split(" ")
+    const [h,min] = time.split(":")
+    const [d,m,y] = date.split("/")
+    var dueDate = new Date(`${m} ${d} ${y} ${h}:${min}:00 GMT`).getUnixTime();
+    now = new Date().getUnixTime();
+
+    var timeUntilDue = dueDate - now;
+
+    if (timeUntilDue > 86400) {
+      e.innerHTML = `${Math.floor((dueDate - now) / 86400)} days`;
+    } else if (timeUntilDue > 3600) {
+      e.innerHTML = `${Math.floor((dueDate - now) / 3600)} hours`;
+    } else if (timeUntilDue > 60) {
+      e.innerHTML = `${Math.floor((dueDate - now) / 60)} minutes`;
+    } else if (timeUntilDue > 0) {
+      e.innerHTML = `${(dueDate - now)} seconds`;
+    } else {
+      e.innerHTML = `Due`;
+    }
+  }
+  setTimeout("getTimeUntilDue()", 100)
 }

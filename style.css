@@ -404,6 +404,13 @@ a {
   margin: 12px;
 }
 
+.content-dates {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .item-header {
   display: flex;
   flex-direction: row;
@@ -495,4 +502,35 @@ a {
   .item-content p.example-code {
     font-size: 14px;
   }
+}
+
+.date-card {
+  background-color: #27272e;
+  flex: auto;
+  max-width: 12.5%;
+  border-radius: 8px;
+}
+
+.date-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a2e5a;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.date-header p {
+  margin: 2px 8px;
+}
+
+.date-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date-content p {
+  text-align: center;
+  margin: 4px;
 }

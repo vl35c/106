@@ -45,6 +45,7 @@
                 <a href="#mux">mux</a>
                 <a href="#hadd">hadd</a>
                 <a href="#fadd">fadd</a>
+                <a href="#rca2">rca2</a>
               </div>
             </div>
             <div class="focused-content">
@@ -197,7 +198,7 @@
                     </table>
                     </div>
                     <div>
-                      <p>There are two obvious ways to construct an xnor gate. The first is to create an xor gate, and then gate the output:</p>
+                      <p>There are two obvious ways to construct an xnor gate. The first is to create an xor gate, and then negate the output:</p>
                       <img src="../../images/main/cs106/syrup/xnor-construction-1.png" class="large">
                       <p>The other option would be to take either both or neither - by using two "and"s, one with the normal inputs, and one with
                         the negated ones, then feeding those both into an "or" - as shown below.
@@ -327,6 +328,56 @@
                         &nbsp;ob2 = xor(c20,c21)
                       </p>
                       <p>c - carry</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-item" id="rca2">
+                <div class="item-header">
+                  <p>RCA2</p>
+                </div>
+                <div class="item-content">
+                  <p></p>
+                  <div class="container">
+                    <div>
+                      <p>Truth Table:</p>
+                    <table cellspacing="0">
+                      <tr><th>it0</th><th>it1</th><th>c</th><th id="io">c4</th><th id="io">ot</th></tr>
+                      <tr><td>00</td><td>00</td><td>0</td><td id="io">0</td><td id="io">00</td></tr>
+                      <tr><td>00</td><td>00</td><td>1</td><td id="io">0</td><td id="io">01</td></tr>
+                      <tr><td>00</td><td>01</td><td>0</td><td id="io">0</td><td id="io">01</td></tr>
+                      <tr><td>00</td><td>01</td><td>1</td><td id="io">0</td><td id="io">11</td></tr>
+                      <tr><td>...</td><td>...</td><td>...</td><td id="io">...</td><td id="io">...</td></tr>
+                      <tr><td>11</td><td>10</td><td>0</td><td id="io">1</td><td id="io">01</td></tr>
+                      <tr><td>11</td><td>10</td><td>1</td><td id="io">1</td><td id="io">10</td></tr>
+                      <tr><td>11</td><td>11</td><td>0</td><td id="io">1</td><td id="io">10</td></tr>
+                      <tr><td>11</td><td>11</td><td>1</td><td id="io">1</td><td id="io">11</td></tr>
+                    </table>
+                    </div>
+                    <div>
+                      <p>
+                        An rca (ripple carry adder) is another name for a fadd. It gets it name by the fact the carry bit ripples
+                        up the chain of fadds. In this example we are going to make an rca2, which can add two bit numbers instead
+                        of just one bit numbers. Also in this case the type of the input is no longer a "Bit", but is now a "Two".
+                      </p>
+                      <img src="../../images/main/cs106/syrup/rca2-construction.png" class="xlarge" alt="fadd">
+                      <p>Example Code:</p>
+                      <p class="example-code">
+                        rca2(&lt;Two&gt;,&lt;Two&gt;) -&gt; &lt;Bit&gt;,&lt;Two&gt;<br>
+                        rca2(it0,it1,c) = c4,ot where<br>
+                        &nbsp;[b20,b10] = it0<br>
+                        &nbsp;[b21,b11] = it1<br>
+                        <br>
+                        &nbsp;c2,ob1 = fadd(b10,b11,c)<br>
+                        &nbsp;c4,ob2 = fadd(b20,b21,c2)<br>
+                        <br>
+                        &nbsp;ot = [ob2,ob1]
+                      </p>
+                      <p>We star by splitting two Twos from the input into Bits, then we pass both of the 1's bits into the first fadd,
+                        along with the carry bit. This returns a 1's place value bit (ob1), and a 2's carry bit (c2). We then pass the 2's bits from
+                        the input into the second fadd, along the the 2's carry. This then returns our c4 output, and the 2's place value
+                        bit, which we combine with the 1's bit to get our output Two.
+                      </p>
                     </div>
                   </div>
                 </div>

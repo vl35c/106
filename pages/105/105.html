@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/58125ddddb.js" crossorigin="anonymous"></script>
+    <script src="../../script.js"></script>
   </head>
-  <body>
+  <body onload="getTimeUntilDue()">
     <div class="page">
       <div class="header">
         <div class="header-content">
@@ -36,6 +37,20 @@
                 <tr><td>Mon</td><td>2pm</td><td>TG312</td></tr>
                 <tr><td>Fri</td><td>2pm</td><td>UC317</td></tr>
               </table>
+            </div>
+          </div>
+          <div class="content content-border">
+            <p class="title">KEY DATES</p>
+            <div class="content-dates">
+              <div class="date-card">
+                <div class="date-header">
+                  <p>15:00 27/12/2023</p>
+                  <p class="js-time-until-due"></p>
+                </div>
+                <div class="date-content">
+                  <p>2nd Lab Assignments Begin in Lab Slots</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

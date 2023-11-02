@@ -507,8 +507,25 @@ a {
 .date-card {
   background-color: #27272e;
   flex: auto;
-  max-width: 12.5%;
   border-radius: 8px;
+}
+
+@media screen and (min-width: 0px) {
+  .date-card {
+    max-width: 33%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .date-card {
+    max-width: 20%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .date-card {
+    max-width: 12.5%;
+  }
 }
 
 .date-header {

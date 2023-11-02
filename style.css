@@ -479,5 +479,16 @@ a {
   border: #111 1px solid;
   font-family: JetBrains;
   color: #ddd;
-  font-size: 14px;
+}
+
+@media screen and (min-width: 0px) {
+  .item-content p.example-code {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .item-content p.example-code {
+    font-size: 14px;
+  }
 }

@@ -460,7 +460,7 @@ a {
 }
 
 @media screen and (min-width: 0px) {
-  .item-content img.large {
+  .item-content img.large, .item-content img.xlarge {
     max-width: 100%;
   }
 }
@@ -468,6 +468,10 @@ a {
 @media screen and (min-width: 768px) {
   .item-content img.large {
     max-height: 140px;
+  }
+
+  .item-content img.xlarge {
+    max-height: 200px;
   }
 }
 
@@ -478,7 +482,7 @@ a {
   border-radius: 6px;
   border: #111 1px solid;
   font-family: JetBrains;
-  color: #ddd;
+  color: #ddd; 
 }
 
 @media screen and (min-width: 0px) {

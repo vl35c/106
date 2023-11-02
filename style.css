@@ -35,6 +35,11 @@ a {
   src: url(fonts/titilliumweb-bold.ttf);
 }
 
+@font-face {
+  font-family: JetBrains;
+  src: url(fonts/jetbrains-reg.ttf);
+}
+
 .fill-space {
   flex: 1 0 auto;
 }
@@ -472,6 +477,6 @@ a {
   padding: 8px;
   border-radius: 6px;
   border: #111 1px solid;
-  font-family: 'Lucida Sans';
+  font-family: JetBrains;
   color: #ddd;
 }

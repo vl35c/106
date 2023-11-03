@@ -65,7 +65,7 @@ function getTimeUntilDue() {
     const [time, date] = e.parentElement.children[0].innerHTML.split(" ")
     const [h,min] = time.split(":")
     const [d,m,y] = date.split("/")
-    var dueDate = new Date(`${m} ${d} ${y} ${h}:${min}:00 GMT`).getTime() / 1000;
+    var dueDate = new Date(`${m} ${d} ${y} ${h}:${min}:00 GMT`).getTime();
     now = new Date().getTime() / 1000;
 
     var timeUntilDue = dueDate - now;

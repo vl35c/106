@@ -55,6 +55,8 @@ function getTime() {
       element2.style.display = "none";
     }
   }
+
+  setTimeout("getTime", 360000)
 }
 
 function getTimeUntilDue() {

@@ -546,6 +546,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 48px;
 }
 
 .date-content p {

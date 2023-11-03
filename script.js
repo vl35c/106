@@ -31,10 +31,6 @@ var timetable = {
   }
 }
 
-Date.prototype.getUnixTime = function() { return this.getTime()/1000|0 };
-if(!Date.now) Date.now = function() { return new Date(); }
-Date.time = function() { return Date.now().getUnixTime(); }
-
 function getTime() {
   const d = new Date();
   let day = d.getDay();
@@ -67,8 +63,8 @@ function getTimeUntilDue() {
     const [time, date] = e.parentElement.children[0].innerHTML.split(" ")
     const [h,min] = time.split(":")
     const [d,m,y] = date.split("/")
-    var dueDate = new Date(`${m} ${d} ${y} ${h}:${min}:00 GMT`).getUnixTime();
-    now = new Date().getUnixTime();
+    var dueDate = new Date(`${m} ${d} ${y} ${h}:${min}:00 GMT`).getTime() / 1000;
+    now = new Date().getTime() / 1000;
 
     var timeUntilDue = dueDate - now;
 

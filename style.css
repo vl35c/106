@@ -542,11 +542,24 @@ a {
   margin: 2px 8px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .date-header {
+    color: #fff;
+  }
+}
+
 .date-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 48px;
+}
+
+@media (prefers-color-scheme: light) {
+  .date-content {
+    box-shadow 0 0 0 1px #16161d inset;
+    color: #000;
+  }
 }
 
 .date-content p {

@@ -1,54 +1,640 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Strath CS - Syrup</title>
-    <link rel="stylesheet" href="../../style.css" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <script src="https://kit.fontawesome.com/58125ddddb.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class="page">
-      <div class="header">
-        <div class="header-content">
-          <img src="../../images/header/strath-logo.png" id="strath-logo">
-          <p class="page-title"><span class="semi-bold-text">Syrup</span> - Strathclyde CS/SE</p>
-        </div>
-      </div>
-      <div class="subheader">
-        <div class="subheader-content">
-          <a href="../../index.html" class="subheader-nav-link"><p>Home</p></a>
-          <a href="../101/101.html" class="subheader-nav-link"><p>101</p></a>
-          <a href="../103/103.html" class="subheader-nav-link"><p>103</p></a>
-          <a href="../104/104.html" class="subheader-nav-link"><p>104</p></a>
-          <a href="../105/105.html" class="subheader-nav-link"><p>105</p></a>
-          <a href="106.html" class="subheader-nav-link active"><p>106</p></a>
-        </div>
-      </div>
-      <div class="main">
-        <div class="main-content">
-          <p class="latest">Syrup</p>
-          <div class="content-container">
-            <div class="side-content">
-              <p>FUNDAMENTAL GATES</p>
-              <div class="list">
-                <p>not</p>
-                <p>and</p>
-                <p>or</p>
-                <p>xor</p>
-                <p>nand</p>
-                <p>nor</p>
-                <p>xnor</p>
-              </div>
-            </div>
-            <div class="focused-content">
-              <div class="content-item">
-                <p>NOT GATE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+	<head>
+		<title>Strath CS - Syrup</title>
+		<link rel="stylesheet" href="../../assets/styles/style.css" type="text/css">
+		<link rel='stylesheet' href="../../assets/styles/page.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<script src="https://kit.fontawesome.com/58125ddddb.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="header">
+				<div class="header-content">
+					<img src="../../assets/images/header/strath-logo.png" id="strath-logo">
+					<p class="page-title"><span class="semi-bold-text">Syrup</span> - Strathclyde CS/SE</p>
+				</div>
+			</div>
+
+      		<div class="navbar">
+				<div class="navbar-content">
+					<a href="../../index" class="nav-link"><p>Home</p></a>
+					<a href="../101/101" class="nav-link"><p>101</p></a>
+					<a href="../103/103" class="nav-link"><p>103</p></a>
+					<a href="../104/104" class="nav-link"><p>104</p></a>
+					<a href="../105/105" class="nav-link"><p>105</p></a>
+					<a href="../106/106" class="nav-link active"><p>106</p></a>
+				</div>
+			</div>
+
+			<main class="main">
+				
+				<div class="main-content">
+					<p class="main-container-title">Syrup</p>
+					<div class="content-container">
+
+						<div class="side-content">
+							<p>FUNDAMENTAL GATES</p>
+							<div class="list">
+								<a class="list-link" href="#not">not</a>
+								<a class="list-link"  href="#and">and</a>
+								<a class="list-link"  href="#or">or</a>
+								<a class="list-link"  href="#nand">nand</a>
+								<a class="list-link"  href="#nor">nor</a>
+								<a class="list-link"  href="#xor">xor</a>
+								<a class="list-link"  href="#xnor">xnor</a>
+							</div>
+
+							<p>OTHER USEFUL GATES</p>
+							<div class="list">
+								<a class="list-link"  href="#mux">mux</a>
+								<a class="list-link"  href="#hadd">hadd</a>
+								<a class="list-link"  href="#fadd">fadd</a>
+								<a class="list-link"  href="#rca2">rca2</a>
+							</div>
+						</div>
+
+            			<div class="focused-content">
+
+              				<div class="content-item" id="not">
+								<div class="item-header">
+									<p>NOT GATE</p>
+									<img src="../../assets/images/main/106/syrup/not-gate.png" alt="not gate diagram">
+								</div>
+
+								<div class="item-content">
+									<p>A not gate - often denoted ! - is the most simple gate, taking in 1 input, and returning the opposite.</p>
+									<p>Truth Table:</p>
+									<table cellspacing="0">
+										<tr><th>Input</th><th id="io">Output</th></tr>
+										<tr><td>0</td><td id="io">1</td></tr>
+										<tr><td>1</td><td id="io">0</td></tr>
+									</table>
+								</div>
+							</div>
+
+							<div class="content-item" id="and">
+								<div class="item-header">
+									<p>AND GATE</p>
+									<img src="../../assets/images/main/106/syrup/and-gate.png" alt="and-gate">
+								</div>
+
+								<div class="item-content">
+								
+									<p>
+										An and gate - often denoted & - is a gate which takes in two inputs and returns 1 if 
+										<span class="semi-bold-text">both</span> inputs are also 1.
+									</p>
+
+									<p>Truth Table:</p>
+									<table cellspacing="0">
+										<tr><th>x</th><th>y</th><th id="io">z</th></tr>
+										<tr><td>0</td><td>0</td><td id="io">0</td></tr>
+										<tr><td>0</td><td>1</td><td id="io">0</td></tr>
+										<tr><td>1</td><td>0</td><td id="io">0</td></tr>
+										<tr><td>1</td><td>1</td><td id="io">1</td></tr>
+									</table>
+								</div>
+							</div>
+
+							<div class="content-item" id="or">
+								<div class="item-header">
+									<p>OR GATE</p>
+									<img src="../../assets/images/main/106/syrup/or-gate.png" alt="or-gate">
+								</div>
+
+								<div class="item-content">
+									<p>
+										An or gate - often denoted | - is a gate which takes in two inputs and returns 1 if 
+										<span class="semi-bold-text">either</span> input is 1.
+									</p>
+
+									<p>Truth Table:</p>
+									<table cellspacing="0">
+										<tr><th>x</th><th>y</th><th id="io">z</th></tr>
+										<tr><td>0</td><td>0</td><td id="io">0</td></tr>
+										<tr><td>0</td><td>1</td><td id="io">1</td></tr>
+										<tr><td>1</td><td>0</td><td id="io">1</td></tr>
+										<tr><td>1</td><td>1</td><td id="io">1</td></tr>
+									</table>
+								</div>
+							</div>
+
+							<div class="content-item" id="nand">
+								<div class="item-header">
+									<p>NAND GATE</p>
+									<img src="../../assets/images/main/106/syrup/nand-gate.png" alt="nand gate diagram">
+								</div>
+
+								<div class="item-content">
+									<p>
+										A nand gate is a <span class="semi-bold-text">negated and</span> gate. What this means is the output is just the 
+										output from an and gate flipped.
+									</p>
+
+									<div class="container">
+										<div>
+											<p>Truth Table:</p>
+											<table cellspacing="0">
+												<tr><th>x</th><th>y</th><th id="io">z</th></tr>
+												<tr><td>0</td><td>0</td><td id="io">1</td></tr>
+												<tr><td>0</td><td>1</td><td id="io">1</td></tr>
+												<tr><td>1</td><td>0</td><td id="io">1</td></tr>
+												<tr><td>1</td><td>1</td><td id="io">0</td></tr>
+											</table>
+										</div>
+
+										<div>
+											<p>Here is a diagram showing how nand is constructed:</p>
+											<img src="../../assets/images/main/106/syrup/nand-construction.png" alt="nand gate construction">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="content-item" id="nor">
+								<div class="item-header">
+									<p>NOR GATE</p>
+									<img src="../../assets/images/main/106/syrup/nor-gate.png" alt="nor gate diagram">
+								</div>
+
+								<div class="item-content">
+									<p>
+										A nor gate is a <span class="semi-bold-text">negated or</span> gate. What this means is the output is just 
+										the output from an or gate flipped.
+									</p>
+
+									<div class="container">
+										<div>
+											<p>Truth Table:</p>
+											<table cellspacing="0">
+												<tr><th>x</th><th>y</th><th id="io">z</th></tr>
+												<tr><td>0</td><td>0</td><td id="io">1</td></tr>
+												<tr><td>0</td><td>1</td><td id="io">0</td></tr>
+												<tr><td>1</td><td>0</td><td id="io">0</td></tr>
+												<tr><td>1</td><td>1</td><td id="io">0</td></tr>
+											</table>
+										</div>
+
+										<div>
+											<p>Here is a diagram showing how nor is constructed:</p>
+											<img src="../../assets/images/main/106/syrup/nor-construction.png" alt="nor gate construction">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="content-item" id="xor">
+								<div class="item-header">
+									<p>XOR GATE</p>
+									<img src="../../assets/images/main/106/syrup/xor-gate.png" alt="xor gate diagram">
+								</div>
+
+								<div class="item-content">
+									<p>An xor gate is a <span class="semi-bold-text">exclusive or</span> gate. When we use the word "or" in 
+										english, we normally are talking about <span class="semi-bold-text">exclusive</span> or. 
+										This means when we have choice A or B, it means one or the other. In computing, an or gate
+										is inclusive, meaning both options is also valid. xor is the "one or the other gate" - either but not both.
+									</p>
+
+									<div class="container">
+										<div>
+											<p>Truth Table:</p>
+											<table cellspacing="0">
+												<tr><th>x</th><th>y</th><th id="io">z</th></tr>
+												<tr><td>0</td><td>0</td><td id="io">0</td></tr>
+												<tr><td>0</td><td>1</td><td id="io">1</td></tr>
+												<tr><td>1</td><td>0</td><td id="io">1</td></tr>
+												<tr><td>1</td><td>1</td><td id="io">0</td></tr>
+											</table>
+										</div>
+
+										<div>
+											<p>Here is a diagram showing how nor is constructed:</p>
+											
+											<img src="../../assets/images/main/106/syrup/xor-construction.png" class="large">
+											<p>In this example, we don't use a nand gate, however it could be substituted in, but it also useful to know
+												<br>how to make the gate from just "and", "or", and "not".
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="content-item" id="xnor">
+								<div class="item-header">
+									<p>XNOR GATE</p>
+									<img src="../../assets/images/main/106/syrup/xnor-gate.png" alt="xnor gate diagram">
+								</div>
+
+								<div class="item-content">
+									<p>
+										An xnor gate is an <span class="semi-bold-text">exclusive negated or</span> gate. The easiest 
+										way to construct this gate, is to just negate the xor gate we made previously. The xnor gate
+										tests if both inputs are the same.
+									</p>
+
+									<div class="container">
+										<div>
+											<p>Truth Table:</p>
+											<table cellspacing="0">
+												<tr><th>x</th><th>y</th><th id="io">z</th></tr>
+												<tr><td>0</td><td>0</td><td id="io">1</td></tr>
+												<tr><td>0</td><td>1</td><td id="io">0</td></tr>
+												<tr><td>1</td><td>0</td><td id="io">0</td></tr>
+												<tr><td>1</td><td>1</td><td id="io">1</td></tr>
+											</table>
+										</div>
+
+										<div>
+											<p>There are two obvious ways to construct an xnor gate. The first is to create an xor gate, and then negate<br>the output:</p>
+											<img src="../../assets/images/main/106/syrup/xnor-construction-1.png" class="large" alt="xnor construction diagram 1">
+											<p>
+												The other option would be to take either both or neither - 
+												by using two "and"s, one with the normal<br>inputs, and one with 
+												the negated ones, then feeding those both into an "or" - as shown below.
+											</p>
+
+											<img src="../../assets/images/main/106/syrup/xnor-construction-2.png" class="large" alt="xnor construction diagram 2">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="content-item" id="mux">
+								<div class="item-header">
+									<p>MUX</p>
+								</div>
+
+								<div class="item-content">
+									<div class="container">
+										<div>
+											<p>Truth Table:</p>
+											<table cellspacing="0">
+												<tr><th>c</th><th>x</th><th>y</th><th id="io">z</th></tr>
+												<tr><td>0</td><td>0</td><td>0</td><td id="io">0</td></tr>
+												<tr><td>0</td><td>0</td><td>1</td><td id="io">0</td></tr>
+												<tr><td>0</td><td>1</td><td>0</td><td id="io">1</td></tr>
+												<tr><td>0</td><td>1</td><td>1</td><td id="io">1</td></tr>
+												<tr><td>1</td><td>0</td><td>0</td><td id="io">0</td></tr>
+												<tr><td>1</td><td>0</td><td>1</td><td id="io">1</td></tr>
+												<tr><td>1</td><td>1</td><td>0</td><td id="io">0</td></tr>
+												<tr><td>1</td><td>1</td><td>1</td><td id="io">1</td></tr>
+											</table>
+										</div>
+
+										<div>
+											<p>
+												This is our first circuit which takes 3 inputs. Mux is short for multiplexer, which is another name for 
+												a data selector. The first cable, labelled c, is the control cable. This cable tells the circuit which of the
+												other two inputs to output. If the control cable is zero, we output x, and if the control cable is one, then we
+												output y. The colour of the cables is just to distinguish them from each other.
+											</p>
+
+											<img src="../../assets/images/main/106/syrup/mux-construction.png" class="large" alt="mux construction diagram">
+											<p>Example Code:</p>
+											<div class="example-code">
+												<p>
+													<span class="func">mux</span>(<span class='var'>&lt;Bit&gt;</span>,
+													<span class='var'>&lt;Bit&gt;</span>,
+													<span class='var'>&lt;Bit&gt;</span>) 
+													<span class='dec'>-&gt;</span> 
+													<span class='var'>&lt;Bit&gt;</span>
+												</p>
+												
+												<p>
+													<span class='func'>mux</span>(<span class='var'>c</span>,
+													<span class='var'>x</span>,
+													<span class='var'>y</span>)
+													<span class='dec'>=</span>
+													<span class='var'>z</span>
+													<span class='dec'>where</span>
+												</p>
+
+												<p>
+													&nbsp;&nbsp;
+													<span class='var'>z</span>
+													<span class='dec'>=</span>
+													(<span class='dec'>!</span><span class='var'>c</span>
+													<span class='dec'>&</span>
+													<span class='var'>x</span>)
+													<span class='dec'>|</span> 
+													(<span class='var'>c</span>
+													<span class='dec'>&</span>
+													<span class='var'>y</span>)
+												</p>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="content-item" id="hadd">
+								<div class="item-header">
+									<p>HADD</p>
+								</div>
+
+								<div class="item-content">
+									<div class="container">
+										<div>
+											<p>Truth Table:</p>
+												<table cellspacing="0">
+													<tr><th>ib10</th><th>ib11</th><th id="io">ob2</th><th id="io">ob1</th></tr>
+													<tr><td>0</td><td>0</td><td id="io">0</td><td id="io">0</td></tr>
+													<tr><td>0</td><td>1</td><td id="io">0</td><td id="io">1</td></tr>
+													<tr><td>1</td><td>0</td><td id="io">0</td><td id="io">1</td></tr>
+													<tr><td>1</td><td>1</td><td id="io">1</td><td id="io">0</td></tr>
+												</table>
+										</div>
+										
+										<div>
+											<p>
+												The hadd (half adder) is a circuit which takes in 2 bits and adds them together. The largest value this can return is 2, 
+												which cannot fit in a single bit, so we need to return bits to store the value.
+												
+												<br><br>
+												
+												The naming convention used is (?identifier)(type)(significance)(?index) - Let's break that down. 
+												<br>
+												The identifier is not always used - only when needed. In this case we differentiate between the input<br>
+												and the output, so we use "i" and "o" as the identifiers. 
+												<br><br>
+												Then we have the type - in this case we are dealing with bits, so we use "b". We then have the significance. 
+												Both inputs are 1's bits, so they have a significance of 1, whereas the output has a 1 and a 2's bit,<br>
+												hence the 1 and 2. Lastly we have the index. We have multiple 1's bits in the input, so we put an index on the end to 
+												tell them apart. 
+												<br><br>
+												Decoding an example we get:
+												<br>
+												ib10 = first 1's bit from the input (input bit 1 0)<br>
+												ob2 = 2's bit in the output (output bit 2).
+												<br><br>
+
+												This convention is used, instead of ambiguous names such as a,b,c etc.
+											</p>
+
+											<img src="../../assets/images/main/106/syrup/hadd-construction.png" class="large" alt="hadd">
+											<p>Example Code:</p>
+
+											<div class="example-code">
+												<p>
+													<span class="func">hadd</span>(<span class="var">&lt;Bit&gt;</span>,
+													<span class="var">&lt;Bit&gt;</span>)
+													<span class="dec"> -&gt;</span>
+													<span class="var">&lt;Bit&gt;</span>,
+													<span class="var">&lt;Bit&gt;</span>
+												</p>
+												
+												<p>
+													<span class="func">hadd</span>(<span class='var'>ib10</span>,
+													<span class='var'>ib11</span>)
+													<span class="dec">=</span>
+													<span class="var">ob2</span>,
+													<span class='var'>ob1</span>
+													<span class='dec'>where</span>
+												</p>
+
+												<p>
+													&nbsp;&nbsp;<span class="var">ob1</span>
+													<span class="dec">=</span>
+													<span class="func">xor</span>(<span class='var'>ib10</span>,
+													<span class='var'>ib11</span>)
+												</p>
+
+												<p>
+													&nbsp;&nbsp;<span class="var">ob2</span>
+													<span class="dec">=</span>
+													<span class='var'>ib10</span>
+													<span class="dec">&</span>
+													<span class="var">ib11</span>
+												</p>
+											</div>
+										</div>
+								</div>
+								</div>
+							</div>
+
+							<div class="content-item" id="fadd">
+								<div class="item-header">
+									<p>FADD</p>
+								</div>
+
+								<div class="item-content">
+									<div class="container">
+										<div>
+											<p>Truth Table:</p>
+											<table cellspacing="0">
+												<tr><th>ib10</th><th>ib11</th><th>ib12</th><th id="io">ob2</th><th id="io">ob1</th></tr>
+												<tr><td>0</td><td>0</td><td>0</td><td id="io">0</td><td id="io">0</td></tr>
+												<tr><td>0</td><td>0</td><td>1</td><td id="io">0</td><td id="io">1</td></tr>
+												<tr><td>0</td><td>1</td><td>0</td><td id="io">0</td><td id="io">1</td></tr>
+												<tr><td>0</td><td>1</td><td>1</td><td id="io">1</td><td id="io">0</td></tr>
+												<tr><td>1</td><td>0</td><td>0</td><td id="io">0</td><td id="io">1</td></tr>
+												<tr><td>1</td><td>0</td><td>1</td><td id="io">1</td><td id="io">0</td></tr>
+												<tr><td>1</td><td>1</td><td>0</td><td id="io">1</td><td id="io">0</td></tr>
+												<tr><td>1</td><td>1</td><td>1</td><td id="io">1</td><td id="io">1</td></tr>
+											</table>
+										</div>
+										<div>
+
+											<p>
+												The fadd (full adder) is a circuit which takes in three inputs and adds them together. We still only
+												need 2 output bits, as the greatest value we can get is 3 (11). This time we take in two 1 bit inputs,
+												and a carry bit.<br>
+												Note - the order of cables coming out of the boxes is the same as the order when the function was defined. In
+												this case the first hadd has a red and blue cable, the red being the 2's and the blue being the 1's bit.
+											</p>
+											
+											<img src="../../assets/images/main/106/syrup/fadd-construction.png" class="large" alt="fadd construction diagram">
+
+											<p>Example Code:</p>
+
+											<div class="example-code">
+												<p>
+													<span class="func">fadd</span>(<span class='var'>&lt;Bit&gt;</span>,
+													<span class='var'>&lt;Bit&gt;</span>,
+													<span class='var'>&lt;Bit&gt;</span>)
+													<span class="dec"> -&gt;</span>
+													<span class='var'>&lt;Bit&gt;</span>,
+													<span class='var'>&lt;Bit&gt;</span>
+												</p>
+
+												<p>
+													<span class="func">fadd</span>(<span class='var'>ib10</span>,
+													<span class='var'>ib11</span>,
+													<span class='var'>c</span>)
+													<span class="dec">=</span>
+													<span class="var">ob2</span>,
+													<span class="var">ob1</span>
+													<span class="dec">where</span>
+												</p>
+
+												<p>
+													&nbsp;&nbsp;<span class="var">c20</span>,
+													<span class="var">b10</span>
+													<span class="dec">=</span>
+													<span class='func'>hadd</span>(<span class='var'>ib10</span>,
+													<span class='var'>ib11</span>)	
+												</p>
+												
+												<p>
+													&nbsp;&nbsp;<span class='var'>c21</span>,
+													<span class="var">ob1</span>
+													<span class="dec">=</span>
+													<span class='func'>hadd</span>(<span class='var'>c</span>,
+													<span class='var'>b10</span>)
+												</p>
+
+												<p>
+													&nbsp;&nbsp;<span class="var">ob2</span>
+													<span class="dec">=</span>
+													<span class='func'>xor</span>(<span class='var'>c20</span>,
+													<span class='var'>c21</span>)
+												</p>
+												
+											</div>
+
+											<p>c - carry</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="content-item" id="rca2">
+								<div class="item-header">
+									<p>RCA2</p>
+								</div>
+								
+								<div class="item-content">
+									<div class="container">
+										<div>
+											<p>Truth Table:</p>
+											
+											<table cellspacing="0">
+												<tr><th>it0</th><th>it1</th><th>c</th><th id="io">c4</th><th id="io">ot</th></tr>
+												<tr><td>00</td><td>00</td><td>0</td><td id="io">0</td><td id="io">00</td></tr>
+												<tr><td>00</td><td>00</td><td>1</td><td id="io">0</td><td id="io">01</td></tr>
+												<tr><td>00</td><td>01</td><td>0</td><td id="io">0</td><td id="io">01</td></tr>
+												<tr><td>00</td><td>01</td><td>1</td><td id="io">0</td><td id="io">11</td></tr>
+												<tr><td>...</td><td>...</td><td>...</td><td id="io">...</td><td id="io">...</td></tr>
+												<tr><td>11</td><td>10</td><td>0</td><td id="io">1</td><td id="io">01</td></tr>
+												<tr><td>11</td><td>10</td><td>1</td><td id="io">1</td><td id="io">10</td></tr>
+												<tr><td>11</td><td>11</td><td>0</td><td id="io">1</td><td id="io">10</td></tr>
+												<tr><td>11</td><td>11</td><td>1</td><td id="io">1</td><td id="io">11</td></tr>
+											</table>
+										</div>
+
+										<div>
+											<p>
+												An rca (ripple carry adder) is another name for a fadd. It gets it name by the fact the carry bit ripples
+												up the chain of fadds. In this example we are going to make an rca2, which can add two bit numbers instead
+												of just one bit numbers. Also in this case the type of the input is no longer a "Bit", but is now a "Two".
+											</p>
+
+											<img src="../../assets/images/main/106/syrup/rca2-construction.png" class="xlarge" alt="fadd construction">
+											
+											<p>Example Code:</p>
+
+											<div class="example-code">
+												<p>
+													<span class="var">&lt;Two&gt;</span>
+													<span class="dec">=</span>
+													[<span class="var">&lt;Bit&gt;</span>,
+													<span class='var'>&lt;Bit&gt;</span>]
+												</p>
+
+												...
+
+												<p>
+													<span class="func">rca2</span>(<span class='var'>&lt;Two&gt;</span>,
+													<span class='var'>&lt;Two&gt;</span>,
+													<span class='var'>&lt;Bit&gt;</span>)
+													<span class='dec'> -&gt;</span>
+													<span class="var">&lt;Bit&gt;</span>,
+													<span class="var">&lt;Two&gt;</span>
+												</p>
+
+												<p>
+													<span class="func">rca2</span>(<span class='var'>it0</span>,
+													<span class='var'>it1</span>,
+													<span class='var'>c</span>)
+													<span class="dec">=</span>
+													<span class="var">c4</span>,
+													<span class="var">ot</span>
+													<span class="dec">where</span>
+												</p>
+
+												<p>
+													&nbsp;&nbsp;
+													[<span class='var'>b20</span>,
+													<span class='var'>b10</span>]
+													<span class='dec'>=</span>
+													<span class="var">it0</span>
+												</p>
+
+												<p>
+													&nbsp;&nbsp;
+													[<span class='var'>b21</span>,
+													<span class='var'>b11</span>]
+													<span class="dec">=</span>
+													<span class="var">it1</span>
+												</p>
+
+												<br>
+
+												<p>
+													&nbsp;&nbsp;
+													<span class="var">c2</span>,
+													<span class="var">ob1</span>
+													<span class="dec">=</span>
+													<span class="func">fadd</span>(<span class='var'>b10</span>,
+													<span class='var'>b11</span>,
+													<span class='var'>c</span>)
+												</p>
+
+												<p>
+													&nbsp;&nbsp;
+													<span class="var">c4</span>,
+													<span class="var">ob2</span>
+													<span class="dec">=</span>
+													<span class="func">fadd</span>(<span class='var'>b20</span>,
+													<span class='var'>b21</span>,
+													<span class='var'>c2</span>)
+												</p>
+
+												<br>
+
+												<p>
+													&nbsp;&nbsp;
+													<span class="var">ot</span>
+													<span class="dec">=</span>
+													[<span class="var">ob2</span>,
+													<span class='var'>ob1</span>]
+												</p>
+
+											</div>
+											
+											<p>
+												We start by splitting two Twos from the input into Bits, then we pass both of the 1's bits into the first fadd,
+												along with the carry bit. This returns a 1's place value bit (ob1), and a 2's carry bit (c2). We then pass the 2's bits from
+												the input into the second fadd, along the the 2's carry. This then returns our c4 output, and the 2's place value
+												bit, which we combine with the 1's bit to get our output Two.
+											</p>
+									</div>
+
+
+								</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</main>
+		</div>
+	</body>
 </html>

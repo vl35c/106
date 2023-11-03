@@ -43,7 +43,6 @@ html, body {
     font-family: TitilliumWeb;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     cursor: default;
 
 	background-color: var(--bg-clr);
@@ -152,7 +151,7 @@ html, body {
 	padding-bottom: 80px;
 }
 
-.main-content > p.card-container-title {
+.main-content > p.main-container-title {
 	font-size: 40px;
 	margin: 0;
 	border-top: var(--accent-clr) 4px solid;
@@ -199,6 +198,7 @@ html, body {
 
 .card {
 	flex: auto;
+	width: 400px;
 	height: 360px;
 	box-shadow: 0 0 0 1px var(--accent-clr) inset;
 	border-radius: 12px;
@@ -250,13 +250,13 @@ html, body {
 }
 
 .card-img {
-	max-width: 70%;
+	max-width: 80%;
 	max-height: 100%;
 	align-self: center;
 }
 
 @media screen and (max-width: 768px) {
-	.card-img {
-		max-width: 60%;
-	}
+	.card-img { max-width: 65%; }
 }
+
+.list-link { color: var(--txt-clr); }

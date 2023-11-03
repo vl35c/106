@@ -1,45 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Strath CS - CS103</title>
-    <link rel="stylesheet" href="../../style.css" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <script src="https://kit.fontawesome.com/58125ddddb.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class="page">
-      <div class="header">
-        <div class="header-content">
-          <img src="../../images/header/strath-logo.png" id="strath-logo">
-          <p class="page-title"><span class="semi-bold-text">CS103</span> - Strathclyde CS/SE</p>
-        </div>
-      </div>
-      <div class="subheader">
-        <div class="subheader-content">
-          <a href="../../index.html" class="subheader-nav-link"><p>Home</p></a>
-          <a href="../101/101.html" class="subheader-nav-link"><p>101</p></a>
-          <a href="103.html" class="subheader-nav-link active"><p>103</p></a>
-          <a href="../104/104.html" class="subheader-nav-link"><p>104</p></a>
-          <a href="../105/105.html" class="subheader-nav-link"><p>105</p></a>
-          <a href="../106/106.html" class="subheader-nav-link"><p>106</p></a>
-        </div>
-      </div>
-      <div class="main">
-        <div class="main-content">
-          <p class="latest">Machines, Languages and Computation</p>
-          <div class="main-header border-connected">
-            <p>Current Lecturer - John Levine</p>
-            <div class="times">
-              <p>Times - </p>
-              <table cellspacing="0">
-                <tr><td>Mon</td><td>10am</td><td>TG312</td></tr>
-                <tr><td>Fri</td><td>10am</td><td>TG312</td></tr>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+	<head>
+		<title>Strath CS - CS103</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" href="../../assets/styles/page.css" type="text/css">
+		<link rel='stylesheet' href="../../assets/styles/style.css" type="text/css">
+
+		<script src="https://kit.fontawesome.com/58125ddddb.js" crossorigin="anonymous" async></script>
+		<script src="../../assets/scripts/script.js"></script>
+	</head>
+
+	<body onload="getTimeUntilDue()">
+		<div class="main">
+
+			<div class="header">
+				<div class="header-content">
+					<img src="../../assets/images/header/strath-logo.png" id="strath-logo" alt='University of Strathclyde Logo'>
+					<p class="page-title"><span class="semi-bold-text">CS101</span> - Strathclyde CS/SE</p>
+				</div>
+			</div>
+
+			<div class="navbar">
+				<div class="navbar-content">
+					<a href="../../index" class="nav-link"><p>Home</p></a>
+					<a href="../101/101" class="nav-link"><p>101</p></a>
+					<a href="../103/103" class="nav-link active"><p>103</p></a>
+					<a href="../104/104" class="nav-link"><p>104</p></a>
+					<a href="../105/105" class="nav-link"><p>105</p></a>
+					<a href="../106/106" class="nav-link"><p>106</p></a>
+				</div>
+			</div>
+
+
+			<main class="main">
+				<div class="main-content">
+
+					<p class="main-container-title">Machines, Languages & Computation</p>
+
+					<div class="main-header border-connected">
+						<p>Current Lecturer - John Levine</p>
+
+						<div class="times">
+							<p>Times - </p>
+
+							<table cellspacing="0">
+								<tr>
+									<td>Mon</td>
+									<td>10am</td>
+									<td>TG312</td>
+								</tr>
+
+								<tr>
+									<td>Fri</td>
+									<td>10am</td>
+									<td>TG312</td>
+								</tr>
+							</table>
+
+						</div>
+					</div>
+
+					<div class="content content-border">
+						<p class="title">KEY DATES</p>
+						<div class="content-dates">
+
+							<div class="date-card">
+								<div class="date-header">
+									<p>10:00 02/12/2023</p>
+									<p class="js-time-until-due"></p>
+								</div>
+								<div class="date-content">
+									<p>2nd 103 Class Test (25%)</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+	</body>
 </html>

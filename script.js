@@ -79,7 +79,7 @@ function getTimeUntilDue() {
     } else if (timeUntilDue > 0) {
       e.innerHTML = `${(dueDate - now)} seconds`;
     } else {
-      e.innerHTML = dueDate;
+      alert(now);
     }
   }
   setTimeout("getTimeUntilDue()", 100)

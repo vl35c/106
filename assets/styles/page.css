@@ -2,11 +2,13 @@
   :root {
     --bg-clr: #111;
     --txt-clr: #fff;
+
     --accent-clr: #203970;
 	--sidebar-clr: #16161d;
 
     --card-bg-clr: #202024;
     --card-txt-clr: #fff;
+
 	--code-bg-clr: #292D34;
   }
 }
@@ -15,9 +17,12 @@
   :root {
     --bg-clr: #fff;
     --txt-clr: #16161d;
+	
 	--sidebar-clr: #16161d;
     --accent-clr: #1a2e5a;
-    --card-txt-clr: #202024;
+    
+	--card-txt-clr: #202024;
+
 	--code-bg-clr: #292D34;
   }
 }
@@ -77,6 +82,16 @@
 	.date-card { max-width: 12.5%; }
 }
 
+/* Sidebar */
+
+.side-content {
+	flex: none;
+	width: 300px;
+	height: fit-content;
+	background-color: var(--accent-clr);
+	border-radius: 8px;
+}
+
 .side-content > * { margin: 12px; }
 
 .side-content > .list {
@@ -88,9 +103,11 @@
 .side-content > .list a {
 	margin: 0 12px;
 	cursor: pointer;
+	display: block;
 }
 
-.side-content > .list a { display: block; }
+/* Main Content */
+
 .focused-content { height: fit-content; }
 
 .content-item {
@@ -98,14 +115,29 @@
 	height: fit-content;
 }
 
-.item-header p { font-size: 24px; }
-
 .content-border {
 	border: var(--accent-clr) 4px solid;
 	border-radius: 16px;
 }
 
-.content-border > * { margin: 12px; }
+.content-border > *,
+.content-item > * > * { margin: 12px; }
+
+.content-dates {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+  
+.content-container {
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+	margin-top: 12px;
+}
+
+/* Content Items */
 
 .item-header {
 	display: flex;
@@ -113,9 +145,18 @@
 	align-items: center;
 }
 
-.content-item > * > * { margin: 12px; }
+.item-header p { font-size: 24px; }
 .item-header img { height: 80px; }
+
 .main-header p { margin: 0 12px; }
+
+.main-header.border-connected {
+	border-left: var(--accent-clr) 4px solid;
+	border-bottom: var(--accent-clr) 4px solid;
+	border-bottom-left-radius: 16px;
+}
+
+/* Class Times */
 
 .main-header > .times {
 	display: flex;
@@ -130,11 +171,7 @@
 .main-header > .times tr:nth-child(even) { background-color: #3e4f7c; }
 .main-header > .times td { padding: 0 6px; }
 
-.main-header.border-connected {
-	border-left: var(--accent-clr) 4px solid;
-	border-bottom: var(--accent-clr) 4px solid;
-	border-bottom-left-radius: 16px;
-}
+/* Table Styling */
 
 .item-content table {
 	text-align: center;
@@ -157,6 +194,9 @@
 }
 
 .item-content img { max-height: 100px; }
+.item-content { margin: 20px; }
+
+/* Code Box Styling */
 
 .item-content .example-code {
 	background-color: var(--code-bg-clr);
@@ -174,9 +214,9 @@
 
 .item-content .example-code span.var { color: #df515d; }
 .item-content .example-code span.dec { color: #C678DD; }
-.item-content .example-code span.func { color: rgb(31, 87, 183); }
+.item-content .example-code span.func { color: #1f57b7; }
 
-.list-link { text-decoration: none; }
+.list-link {  text-decoration: none; }
 .list-link:hover { color: blue; }
 
 /* Due Date Cards */
@@ -208,56 +248,3 @@
 	text-align: center;
 	margin: 4px;
 }
-
-.content-border {
-	border: var(--accent-clr) 4px solid;
-	border-radius: 16px;
-}
-
-.content-border > * { margin: 12px; }
-
-.content-dates {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 12px;
-}
-
-/* Sidebar */
-  
-.content-container {
-	display: flex;
-	flex-direction: row;
-	gap: 24px;
-	margin-top: 12px;
-}
-
-.side-content {
-	flex: none;
-	width: 300px;
-	height: fit-content;
-	background-color: var(--accent-clr);
-	border-radius: 8px;
-}
-
-@media screen and (min-width: 0px) {
-	.side-content { display: none; }
-}
-
-@media screen and (min-width: 768px) {
-	.side-content { display: block; }
-}
-
-.side-content > * { margin: 12px; }
-  
-.side-content > .list {
-	background-color: var(--sidebar-clr);
-	border-radius: 8px;
-}
-
-.side-content > .list p, .side-content > .list a {
-	margin: 0 12px;
-	cursor: pointer;
-}
-
-.side-content > .list a { display: block; }

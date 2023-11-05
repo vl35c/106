@@ -44,7 +44,7 @@ function getTime() {
 		if(hour in timetable[day]) { element.innerHTML = `${dayName[day]} ${hour}:00-${hour+1}:00<br>${timetable[day][hour]}`; } 
 		else { element.style.display = "none"; }
 
-		if(hour + 1 in timetable[day]) { element2.innerHTML = `${dayName[day]} ${hour+1}:00-${hour+2}:00<br>${timetable[day][hour+1]}`; } 
+		if(hour+1 in timetable[day]) { element2.innerHTML = `${dayName[day]} ${hour+1}:00-${hour+2}:00<br>${timetable[day][hour+1]}`; } 
 		else { element2.style.display = "none"; }
 	}
 }
@@ -55,18 +55,15 @@ function getTimeUntilDue() {
 	for(e of elements) {
 		const [time, date] = e.parentElement.children[0].innerHTML.split(" ")
 		
-		const [h,min] = time.split(":")
-		const [d,m,y] = date.split("/")
-		
-		var dueDate = new Date(`${m} ${d} ${y} ${h}:${min}:00 GMT`).getUnixTime();
-		now = new Date().getUnixTime();
+		const [h, min] = time.split(":")
+		const [d, m, y] = date.split("/")
 
-		var timeUntilDue = dueDate - now;
+		var timeUntilDue = (new Date(`${m} ${d} ${y} ${h}:${min}:00 GMT`).getUnixTime()) - (new Date().getUnixTime());
 
-		if (timeUntilDue > 86400) { e.innerHTML = `${Math.floor((dueDate - now) / 86400)} days`; } 
-		else if (timeUntilDue > 3600) { e.innerHTML = `${Math.floor((dueDate - now) / 3600)} hours`; } 
-		else if (timeUntilDue > 60) { e.innerHTML = `${Math.floor((dueDate - now) / 60)} minutes`; }
-		else if (timeUntilDue > 0) { e.innerHTML = `${(dueDate - now)} seconds`; } 
+		if (timeUntilDue > 86400) { e.innerHTML = `${Math.floor((timeUntilDue) / 86400)} day(s)`; } 
+		else if (timeUntilDue > 3600) { e.innerHTML = `${Math.floor((timeUntilDue) / 3600)} hour(s)`; } 
+		else if (timeUntilDue > 60) { e.innerHTML = `${Math.floor((timeUntilDue) / 60)} minute(s)`; }
+		else if (timeUntilDue > 0) { e.innerHTML = `${(timeUntilDue)} second(s)`; } 
 		else { e.innerHTML = "Due"; }
 	}
 	setTimeout("getTimeUntilDue()", 100)

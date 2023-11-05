@@ -2,19 +2,27 @@
 <html>
 	<head>
 		<title>Strath CS - CS104</title>
+
+		<!-- Metadata -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 
+		<!-- Logo -->
+		<link rel="shortcut icon" type="image/x-icon" href='../../assets/images/header/strath-logo.png'>
+
+		<!-- Stylesheets -->
 		<link rel="stylesheet" href="../../assets/styles/page.css" type="text/css">
 		<link rel='stylesheet' href="../../assets/styles/style.css" type="text/css">
 
+		<!-- Scripts -->
 		<script src="https://kit.fontawesome.com/58125ddddb.js" crossorigin="anonymous" async></script>
 		<script src="../../assets/scripts/script.js" async></script>
 	</head>
 
 	<body onload="getTimeUntilDue()">
-		<div class="main">
+		<div class="container">
 
+			<!-- Page Header -->
 			<div class="header">
 				<div class="header-content">
 					<img src="../../assets/images/header/strath-logo.png" id="strath-logo" alt='University of Strathclyde Logo'>
@@ -22,23 +30,24 @@
 				</div>
 			</div>
 
-			<div class="navbar">
+			<nav>
 				<div class="navbar-content">
-					<a href="../../index" class="nav-link"><p>Home</p></a>
+					<a href="../../" class="nav-link"><p>Home</p></a>
 					<a href="../101/101" class="nav-link"><p>101</p></a>
 					<a href="../103/103" class="nav-link"><p>103</p></a>
 					<a href="../104/104" class="nav-link active"><p>104</p></a>
 					<a href="../105/105" class="nav-link"><p>105</p></a>
 					<a href="../106/106" class="nav-link"><p>106</p></a>
 				</div>
-			</div>
+			</nav>
 
-
-			<main class="main">
+			<main>
 				<div class="main-content">
 
+					<!-- Module Header -->
 					<p class="main-container-title">Information & Information Systems</p>
 
+					<!-- Lecture Times -->
 					<div class="main-header border-connected">
 						<p>Current Lecturer - Milena Dobreva</p>
 
@@ -68,8 +77,10 @@
 						</div>
 					</div>
 
+					<!-- Key Dates -->
 					<div class="content content-border">
 						<p class="title">KEY DATES</p>
+
 						<div class="content-dates">
 
 							<div class="date-card">
@@ -77,6 +88,7 @@
 									<p>12:00 02/12/2023</p>
 									<p class="js-time-until-due"></p>
 								</div>
+
 								<div class="date-content">
 									<p>Coursework Due for Submission - 100%</p>
 								</div>
@@ -87,7 +99,7 @@
 
 				</div>
 			</main>
-		</div>
 
+		</div>
 	</body>
 </html>

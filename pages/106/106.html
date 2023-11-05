@@ -2,17 +2,27 @@
 <html>
 	<head>
 		<title>Strath CS - CS106</title>
+
+		<!-- Metadata -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
-		<script src="https://kit.fontawesome.com/58125ddddb.js" crossorigin="anonymous" async></script>
+
+		<!-- Logo -->
+		<link rel="shortcut icon" type="image/x-icon" href='../../assets/images/header/strath-logo.png'>
+
+		<!-- Stylesheets -->
 		<link rel="stylesheet" href='../../assets/styles/page.css' type="text/css">
 		<link rel='stylesheet' href="../../assets/styles/style.css" type="text/css">
-
+		
+		<!-- Scripts -->
+		<script src="https://kit.fontawesome.com/58125ddddb.js" crossorigin="anonymous" async></script>
 		<script src="../../assets/scripts/script.js" async></script>
 	</head>
 
 	<body onload="getTimeUntilDue()">
-		<div class="main">
+		<div class="container">
+			
+			<!-- Page Header -->
 			<div class="header">
 				<div class="header-content">
 					<img src="../../assets/images/header/strath-logo.png" id="strath-logo" alt='University of Strathclyde Logo'>
@@ -20,7 +30,7 @@
 				</div>
 			</div>
 
-			<div class="navbar">
+			<nav>
 				<div class="navbar-content">
 					<a href="../../index" class="nav-link"><p>Home</p></a>
 					<a href="../101/101" class="nav-link"><p>101</p></a>
@@ -29,14 +39,17 @@
 					<a href="../105/105" class="nav-link"><p>105</p></a>
 					<a href="../106/106" class="nav-link active"><p>106</p></a>
 				</div>
-			</div>
+			</nav>
 
-			<main class="main">
+			<main>
 				
 				<div class="main-content">
+
+					<!-- Module Header -->
          			<p class="main-container-title">Computer Systems & Organisation</p>
 
-          			<div class="main-header border-connected">
+					<!-- Lecture Times -->
+					<div class="main-header border-connected">
             			<p>Current Lecturer - Conor McBride</p>
 
             			<div class="times">
@@ -48,8 +61,10 @@
 						</div>
 					</div>
 
+					<!-- Key Dates -->
 					<div class="content content-border">
 						<p class="title">KEY DATES</p>
+
 						<div class="content-dates">
 
 							<div class="date-card">
@@ -57,6 +72,7 @@
 									<p>00:00 09/11/2023</p>
 									<p class="js-time-until-due"></p>
 								</div>
+
 								<div class="date-content">
 									<p>2nd 106 Class Test Opens</p>
 								</div>
@@ -67,6 +83,7 @@
 									<p>00:00 10/11/23</p>
 									<p class="js-time-until-due"></p>
 								</div>
+
 								<div class="date-content">
 									<p>2nd 106 Class Test Closes</p>
 								</div>
@@ -77,6 +94,7 @@
 									<p>00:00 16/11/23</p>
 									<p class="js-time-until-due"></p>
 								</div>
+
 								<div class='date-content'>
 									<p>3rd 106 Class Test Opens</p>
 								</div>
@@ -87,6 +105,7 @@
 									<p>00:00 17/11/23</p>
 									<p class="js-time-until-due"></p>
 								</div>
+								
 								<div class="date-content">
 									<p>3rd Class Test Closes</p>
 								</div>
@@ -97,6 +116,7 @@
 									<p>00:00 23/11/23</p>
 									<p class="js-time-until-due"></p>
 								</div>
+
 								<div class="date-content">
 									<p>4th 106 Class Test Opens</p>
 								</div>
@@ -107,14 +127,17 @@
 									<p>00:00 24/11/23</p>
 									<p class="js-time-until-due"></p>
 								</div>
+
 								<div class="date-content">
 									<p>4th 106 Class Test Closes</p>
 								</div>
 							</div>
 
 						</div>
+
 					</div>
 
+					<!-- Course Content -->
 					<div class="content content-border">
 						<p class="title">COURSE CONTENT</p>
 
@@ -143,18 +166,19 @@
                 				</div>
 
                 				<div class="card-content">
-									<p>Solving TINY Problems</p>
-									<p>Assembling TINY Programs</p>
-									<p>Disassembling TINY Programs</p>
+									<a class='list-link' href=''>Solving TINY Problems</a>
+									<a class='list-link' href=''>Assembling TINY Programs</a>
+									<a class='list-link' href=''>Disassembling TINY Programs</a>
 								</div>
 							</div>
 
 						</div>
           			</div>
+
         		</div>
 
 			</main>
-
+			
       	</div>
 	</body>
 </html>

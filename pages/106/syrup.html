@@ -313,35 +313,9 @@
 											<img src="../../assets/images/main/106/syrup/mux-construction.png" class="large" alt="mux construction diagram">
 											<p>Example Code:</p>
 											<div class="example-code">
-												<p>
-													<span class="func">mux</span>(<span class='var'>&lt;Bit&gt;</span>,
-													<span class='var'>&lt;Bit&gt;</span>,
-													<span class='var'>&lt;Bit&gt;</span>) 
-													<span class='dec'>-&gt;</span> 
-													<span class='var'>&lt;Bit&gt;</span>
-												</p>
-												
-												<p>
-													<span class='func'>mux</span>(<span class='var'>c</span>,
-													<span class='var'>x</span>,
-													<span class='var'>y</span>)
-													<span class='dec'>=</span>
-													<span class='var'>z</span>
-													<span class='dec'>where</span>
-												</p>
-
-												<p>
-													&nbsp;&nbsp;
-													<span class='var'>z</span>
-													<span class='dec'>=</span>
-													(<span class='dec'>!</span><span class='var'>c</span>
-													<span class='dec'>&</span>
-													<span class='var'>x</span>)
-													<span class='dec'>|</span> 
-													(<span class='var'>c</span>
-													<span class='dec'>&</span>
-													<span class='var'>y</span>)
-												</p>
+												<p>mux(&lt;Bit&gt;, &lt;Bit&gt;, &lt;Bit&gt;) -&gt; &lt;Bit&gt; END</p>
+												<p>mux(c, x, y) = z where END</p>
+												<p>&nbsp;&nbsp;z = (!c & x) | (c & y) END</p>
 											</div>
 
 										</div>
@@ -397,37 +371,10 @@
 											<p>Example Code:</p>
 
 											<div class="example-code">
-												<p>
-													<span class="func">hadd</span>(<span class="var">&lt;Bit&gt;</span>,
-													<span class="var">&lt;Bit&gt;</span>)
-													<span class="dec"> -&gt;</span>
-													<span class="var">&lt;Bit&gt;</span>,
-													<span class="var">&lt;Bit&gt;</span>
-												</p>
-												
-												<p>
-													<span class="func">hadd</span>(<span class='var'>ib10</span>,
-													<span class='var'>ib11</span>)
-													<span class="dec">=</span>
-													<span class="var">ob2</span>,
-													<span class='var'>ob1</span>
-													<span class='dec'>where</span>
-												</p>
-
-												<p>
-													&nbsp;&nbsp;<span class="var">ob1</span>
-													<span class="dec">=</span>
-													<span class="func">xor</span>(<span class='var'>ib10</span>,
-													<span class='var'>ib11</span>)
-												</p>
-
-												<p>
-													&nbsp;&nbsp;<span class="var">ob2</span>
-													<span class="dec">=</span>
-													<span class='var'>ib10</span>
-													<span class="dec">&</span>
-													<span class="var">ib11</span>
-												</p>
+												<p>hadd(&lt;Bit&gt;, &lt;Bit&gt;) -&gt; &lt;Bit&gt;, &lt;Bit&gt; END</p>
+												<p>hadd(ib10, ib11) = ob2, ob1 where END</p>
+												<p>&nbsp;&nbsp;ob1 = xor(ib10, ib11) END</p>
+												<p>&nbsp;&nbsp;ob2 = ib10 & ib11</p>
 											</div>
 										</div>
 								</div>
@@ -470,48 +417,11 @@
 											<p>Example Code:</p>
 
 											<div class="example-code">
-												<p>
-													<span class="func">fadd</span>(<span class='var'>&lt;Bit&gt;</span>,
-													<span class='var'>&lt;Bit&gt;</span>,
-													<span class='var'>&lt;Bit&gt;</span>)
-													<span class="dec"> -&gt;</span>
-													<span class='var'>&lt;Bit&gt;</span>,
-													<span class='var'>&lt;Bit&gt;</span>
-												</p>
-
-												<p>
-													<span class="func">fadd</span>(<span class='var'>ib10</span>,
-													<span class='var'>ib11</span>,
-													<span class='var'>c</span>)
-													<span class="dec">=</span>
-													<span class="var">ob2</span>,
-													<span class="var">ob1</span>
-													<span class="dec">where</span>
-												</p>
-
-												<p>
-													&nbsp;&nbsp;<span class="var">c20</span>,
-													<span class="var">b10</span>
-													<span class="dec">=</span>
-													<span class='func'>hadd</span>(<span class='var'>ib10</span>,
-													<span class='var'>ib11</span>)	
-												</p>
-												
-												<p>
-													&nbsp;&nbsp;<span class='var'>c21</span>,
-													<span class="var">ob1</span>
-													<span class="dec">=</span>
-													<span class='func'>hadd</span>(<span class='var'>c</span>,
-													<span class='var'>b10</span>)
-												</p>
-
-												<p>
-													&nbsp;&nbsp;<span class="var">ob2</span>
-													<span class="dec">=</span>
-													<span class='func'>xor</span>(<span class='var'>c20</span>,
-													<span class='var'>c21</span>)
-												</p>
-												
+												<p>fadd(&lt;Bit&gt;, &lt;Bit&gt;, &lt;Bit&gt;, &lt;Bit&gt;) -&gt; &lt;Bit&gt;, &lt;Bit&gt; END</p>
+												<p>fadd(ib10, ib11, c) = ob2, ob1 where END</p>
+												<p>&nbsp;&nbsp;c20, b10 = hadd(ib10, ib11) END</p>
+												<p>&nbsp;&nbsp;c21, ob1 = hadd(c, b10) END</p>
+												<p>&nbsp;&nbsp;ob2 = xor(c20, c21)</p>
 											</div>
 
 											<p>c - carry</p>
@@ -556,82 +466,17 @@
 											<p>Example Code:</p>
 
 											<div class="example-code">
-												<p>
-													<span class="var">&lt;Two&gt;</span>
-													<span class="dec">=</span>
-													[<span class="var">&lt;Bit&gt;</span>,
-													<span class='var'>&lt;Bit&gt;</span>]
-												</p>
-
-												...
-
-												<p>
-													<span class="func">rca2</span>(<span class='var'>&lt;Two&gt;</span>,
-													<span class='var'>&lt;Two&gt;</span>,
-													<span class='var'>&lt;Bit&gt;</span>)
-													<span class='dec'> -&gt;</span>
-													<span class="var">&lt;Bit&gt;</span>,
-													<span class="var">&lt;Two&gt;</span>
-												</p>
-
-												<p>
-													<span class="func">rca2</span>(<span class='var'>it0</span>,
-													<span class='var'>it1</span>,
-													<span class='var'>c</span>)
-													<span class="dec">=</span>
-													<span class="var">c4</span>,
-													<span class="var">ot</span>
-													<span class="dec">where</span>
-												</p>
-
-												<p>
-													&nbsp;&nbsp;
-													[<span class='var'>b20</span>,
-													<span class='var'>b10</span>]
-													<span class='dec'>=</span>
-													<span class="var">it0</span>
-												</p>
-
-												<p>
-													&nbsp;&nbsp;
-													[<span class='var'>b21</span>,
-													<span class='var'>b11</span>]
-													<span class="dec">=</span>
-													<span class="var">it1</span>
-												</p>
-
-												<br>
-
-												<p>
-													&nbsp;&nbsp;
-													<span class="var">c2</span>,
-													<span class="var">ob1</span>
-													<span class="dec">=</span>
-													<span class="func">fadd</span>(<span class='var'>b10</span>,
-													<span class='var'>b11</span>,
-													<span class='var'>c</span>)
-												</p>
-
-												<p>
-													&nbsp;&nbsp;
-													<span class="var">c4</span>,
-													<span class="var">ob2</span>
-													<span class="dec">=</span>
-													<span class="func">fadd</span>(<span class='var'>b20</span>,
-													<span class='var'>b21</span>,
-													<span class='var'>c2</span>)
-												</p>
-
-												<br>
-
-												<p>
-													&nbsp;&nbsp;
-													<span class="var">ot</span>
-													<span class="dec">=</span>
-													[<span class="var">ob2</span>,
-													<span class='var'>ob1</span>]
-												</p>
-
+												<p>&lt;Two&gt; = [ &lt;Bit&gt;, &lt;Bit&gt; ] END</p>
+												<p>... END</p>
+												<p>rca2(&lt;Two&gt;, &lt;Two&gt;, &lt;Bit&gt;) -&gt; &lt;Bit&gt; END</p>
+												<p>rca2(it0, it1, c) = c4, ot where END</p>
+												<p>&nbsp;&nbsp; [ b20, b10 ] = it0 END</p>
+												<p>&nbsp;&nbsp; [ b21, b11 ] = it1 END</p>
+												<p>END</p>
+												<p>&nbsp;&nbsp;c2, ob1 = fadd(b10, b11, c) END</p>
+												<p>&nbsp;&nbsp;c4, ob2 = fadd(b20, b21, c2) END</p>
+												<p>END</p>
+												<p>&nbsp;&nbsp;ot = [ ob2, ob1 ]</p>
 											</div>
 											
 											<p>
@@ -656,5 +501,96 @@
 			</main>
 
 		</div>
+
+		<!-- Syrup Syntax Highlighter -->
+		<script async>
+            /* HOW TO USE SYRUP HIGHLIGHTER
+            - Write whatever you need to, make sure to put a space between anything & square brackets (they behave weirdly for some reason)
+            - If a function is not listed then add it into the dictionary under 'Function Elements'
+            - at the end of every line before a new line add 'END' to add a br tag at the end of the line
+            - To add a line spacer add a paragraph tag with only 'END' inside and it will work as a line break
+            - to add spaces use &nbsp;
+            - to add angle brackets use &lt; and &gt;
+            - Comments Don't work right now
+			- ! when paired with a variable does not work right now
+            */
+
+            SyrupHighlighter(document.getElementsByClassName('example-code'));
+
+            function SyrupHighlighter(code_blocks) {
+                for(var i = 0; i < code_blocks.length; i++) {
+                    code_blocks[i].innerHTML = highlightCode(extractText(code_blocks[i].innerHTML.split('<p>')));
+                }
+            }
+
+            function highlightCode(code) {
+                highlightedTxt = '';
+                code.forEach(line => { highlightedTxt += AddStyles(line); });
+                return highlightedTxt;
+            }
+
+            function extractText(strArr) {
+                var out = '';
+                for(var i = 0; i < strArr.length; i++) { out += strArr[i]; }
+                strArr = out.split('</p>');
+
+                out = '';
+
+                for(var i = 0; i < strArr.length; i++) { out += strArr[i].trim()+'\n'; }
+
+                return out.split('\n');
+            }
+
+            function AddStyles(string) {
+                var lineArr = string.split(/([\(\), ])/).filter(part => part !== ""); // Split all Relevant Syntax objects into an Array
+
+                keywords = { // Dictionary of elements
+
+                    // Function Elements
+                    'mux': '<span class="func">mux</span>',
+                    'not': '<span class="func">not</span>',
+                    'hadd': '<span class="func">hadd</span>',
+                    'xor': '<span class="func">xor</span>',
+                    'fadd': '<span class="func">fadd</span>',
+                    'and': '<span class="func">add</span>',
+                    'or': '<span class="func">or</span>',
+                    'nor': '<span class="func">nor</span>',
+
+                    // Syntax Elements
+                    '(': '(',
+                    ',': ', ',
+                    ')': ')',
+                    ' ': ' ',
+                    '[': '[', // Bugged
+                    ']': ']', // Bugged
+                    '&nbsp;': '&nbsp;',
+                    'END': '<br>',
+                    
+                    // Declaration Elements
+                    '-&gt;': '<span class="dec">-&gt;</span>',
+                    'where': '<span class="dec">where</span>',
+                    '!': '<span class="dec">!</span>', // Bugged
+                    '=': '<span class="dec">=</span>',
+
+                    // Variable Elements
+                    '&amp;': '<span class="dec">&</span>',
+                    '|': '<span class="dec">|</span>',
+                    '&lt;Bit&gt;': '<span class="var">&lt;Bit&gt;</span>',
+                }
+
+                out = '';
+
+                lineArr.forEach(word => {
+                    for(key of Object.keys(keywords)) {
+                        if(word == key) { out += keywords[key]; }
+                    }
+
+                    if(keywords[word] == undefined) { out += `<span class="var">${word}</span>`; }
+                });
+
+                return out;
+            }
+
+        </script>
 	</body>
 </html>

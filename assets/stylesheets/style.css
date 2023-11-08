@@ -119,6 +119,18 @@ a {
   }
 }
 
+.login-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #1a2e5a inset;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
 .subheader {
   flex: none;
   background-color: #1a2e5a;
@@ -283,7 +295,7 @@ a {
 
 @media screen and (min-width: 1000px) {
   .latest-card {
-    max-width: 32%;
+    max-width: 32.8%;
   }
 }
 

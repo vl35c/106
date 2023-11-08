@@ -1,0 +1,88 @@
+@font-face {
+  font-family: TitilliumWeb;
+  src: url(../fonts/titilliumweb.ttf);
+}
+
+@font-face {
+  font-family: TitilliumWebSemiBold;
+  src: url(../fonts/titilliumweb-semibold.ttf);
+}
+
+@font-face {
+  font-family: TitilliumWebBold;
+  src: url(../fonts/titilliumweb-bold.ttf);
+}
+
+@font-face {
+  font-family: JetBrains;
+  src: url(../fonts/jetbrains-reg.ttf);
+}
+
+.modal-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal {
+  background-color: #1a2e5a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  height: fit-content;
+  margin-top: 120px;
+  border-radius: 24px;
+  padding: 24px 0;
+  box-shadow: 0 0 0 2px #fff inset;
+  position: relative;
+}
+
+.modal p {
+  font-size: 48px;
+  margin: 0;
+}
+
+.modal p.small {
+  font-size: 16px;
+}
+
+.modal p span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modal input {
+  margin: 12px 0;
+  border: none;
+  padding: 12px;
+}
+
+.modal button {
+  border: none;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-family: TitilliumWebBold;
+  border-radius: 6px;
+}
+
+.modal button:hover {
+  scale: 102%;
+}
+
+.modal i {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+}
+
+.modal i:hover {
+  scale: 110%;
+  cursor: pointer;
+}

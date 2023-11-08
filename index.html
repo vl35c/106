@@ -3,17 +3,34 @@
   <head>
     <title>Strath CS - Home</title>
     <link rel="stylesheet" href="assets/stylesheets/style.css" type="text/css">
+    <link rel="stylesheet" href="assets/stylesheets/modal.css" typ="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/58125ddddb.js" crossorigin="anonymous"></script>
     <script src="assets/scripts/script.js"></script>
+    <script type="module" src="assets/scripts/modal.js"></script>
+    <script type="module" src="assets/scripts/db.js"></script>
   </head>
   <body onload="getTime()">
     <div class="page">
+      <div class="modal-container" id="modal">
+        <div class="modal">
+          <p>LOGIN</p>
+          <input type="text" id="username" placeholder="Username">
+          <input type="password" id="password" placeholder="Password">
+          <button onclick="login()">LOGIN</button>
+          <p class="small">Don't have an account? Click <span>here</span> to create one</p>
+          <i class="fa-solid fa-x" onclick="closeModal()"></i>
+        </div>
+      </div>
+
       <div class="header">
         <div class="header-content">
           <img src="assets/images/header/strath-logo.png" id="strath-logo">
           <p class="page-title"><span class="semi-bold-text">Home</span> - Strathclyde CS/SE</p>
+          <div class="fill-space"></div>
+          <p id="logged-in-username"><?php echo $username ?></p>
+          <i class="fa-solid fa-user login-icon" onclick="openModal()"></i>
         </div>
       </div>
       <div class="subheader">

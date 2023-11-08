@@ -1,4 +1,7 @@
 function openModal() {
+  if (sessionStorage["logged_in"] == true) {
+    return;
+  }
   var modal = document.getElementById("modal");
   modal.style.display = "flex";
 }

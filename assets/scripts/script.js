@@ -28,7 +28,9 @@ var timetable = {
     11: "CS104 - RC426",
     12: "CS106 - MC301",
     14: "CS105 - UC317"
-  }
+  },
+  6: {},
+  7: {}
 }
 
 function getTime() {
@@ -83,4 +85,13 @@ function getTimeUntilDue() {
     }
   }
   setTimeout("getTimeUntilDue()", 100)
+}
+
+window.addEventListener("load", setSessionVariables)
+
+function setSessionVariables() {
+  if (sessionStorage["logged_in"]) {
+    var user = document.getElementById("logged-in-username")
+    user.innerHTML = sessionStorage["user"];
+  }
 }

@@ -13,7 +13,7 @@ async function login() {
 
   for (var user of data) {
     if (user["username"] == username && user["password"] == password) {
-      sessionStorage["logged_in"] = true;
+      sessionStorage["logged_in"] = "true";
       sessionStorage["user"] = username;
 
       document.getElementById("username").value = "";

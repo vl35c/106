@@ -1,9 +1,10 @@
 function openModal() {
-  if (sessionStorage["logged_in"] == true) {
-    return;
+  if (sessionStorage["logged_in"] != "true") {
+    var modal = document.getElementById("modal");
+    modal.style.display = "flex";
+  } else {
+    window.location.href = "../pages/misc/account.html"
   }
-  var modal = document.getElementById("modal");
-  modal.style.display = "flex";
 }
 
 function closeModal() {

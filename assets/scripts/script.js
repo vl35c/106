@@ -94,4 +94,8 @@ function setSessionVariables() {
     var user = document.getElementById("logged-in-username")
     user.innerHTML = sessionStorage["user"];
   }
+
+  for (var e of document.getElementsByClassName("js-username")) {
+    e.innerHTML = sessionStorage["user"];
+  }
 }

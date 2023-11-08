@@ -6,12 +6,40 @@ html, body {
   height: 100vh;
   overflow: hidden;
   cursor: default;
+  background-color: var(--bg-color-4);
+  color: var(--text-color-4);
+}
+
+:root {
+  --eg: #16161d;
+  --light-eg: #27272e;
+  --white: #fff;
+  --black: #000;
+  --dark-blue: #1a2e5a;
+  --light-blue: #3e4f7c;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background-color: #16161d;
-    color: #fff;
+    --bg-color: var(--dark-blue);
+    --text-color: var(--white);
+    --bg-color-2: var(--light-blue);
+    --text-color-2: var(--white);
+    --bg-color-3: var(--light-eg);
+    --text-color-3: var(--white);
+    --bg-color-4: var(--eg);
+    --text-color-4: var(--white);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: var(--white);
+    --text-color: var(--black);
+    --bg-color-3: var(--light-blue);
+    --text-color-3: var(--white);
+    --bg-color-4: var(--white);
+    --text-color-4: var(--black);
   }
 }
 
@@ -336,6 +364,7 @@ a {
   height: fit-content;
   background-color: #1a2e5a;
   border-radius: 8px;
+  color: var(--text-color-3);
 }
 
 @media screen and (min-width: 0px) {
@@ -355,7 +384,8 @@ a {
 }
 
 .side-content > .list {
-  background-color: #16161d;
+  background-color: var(--bg-color-4);
+  color: var(--text-color-4);
   border-radius: 8px;
 }
 
@@ -431,13 +461,30 @@ a {
   border-collapse: collapse;
 }
 
-.item-content table * {
-  padding: 2px 4px;
-  border: rgba(255, 255, 255, 0.4) 1px solid;
+@media (prefers-color-scheme: dark) {
+  .item-content table * {
+    padding: 2px 4px;
+    border: rgba(255, 255, 255, 0.4) 1px solid;
+  }
 }
 
-.item-content table #io {
-  background-color: #27272e;
+@media (prefers-color-scheme: light) {
+  .item-content table * {
+    padding: 2px 4px;
+    border: #000 1px solid;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .item-content table #io {
+    background-color: #27272e;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .item-content table #io {
+    background-color: #ccc;
+  }
 }
 
 .item-content table td {
@@ -505,7 +552,8 @@ a {
 }
 
 .date-card {
-  background-color: #27272e;
+  background-color: var(--bg-color-3);
+  color: var(--text-color-3);
   flex: auto;
   border-radius: 8px;
 }
@@ -529,11 +577,19 @@ a {
   }
 }
 
+@media (prefers-color-scheme: light) {
+  .date-header {
+    box-shadow: 0 0 0 1px var(--bg-color-3) inset;
+    font-family: TitilliumWebSemiBold;
+  }
+}
+
 .date-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1a2e5a;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
 }

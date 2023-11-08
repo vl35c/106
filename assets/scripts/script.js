@@ -71,7 +71,7 @@ function getTimeUntilDue() {
     var timeUntilDue = dueDate - now;
 
     if (timeUntilDue > 86400) {
-      e.innerHTML = `${Math.floor((dueDate - now) / 86400)} days`;
+      e.innerHTML = `${Math.floor((dueDate - now) / 86400)} days ${Math.floor((dueDate - now) / 3600) % 24} hours`;
     } else if (timeUntilDue > 3600) {
       e.innerHTML = `${Math.floor((dueDate - now) / 3600)} hours`;
     } else if (timeUntilDue > 60) {

@@ -46,14 +46,13 @@ function getTime() {
     if (hour in timetable[day]) {
       var text = `${dayName[day]} ${hour}:00-${hour+1}:00<br>${timetable[day][hour]}`;
       element.innerHTML = text;
-    } else {
-      element.style.display = "none";
+      element.parentElement.style.display = "flex";
     }
 
     if (hour + 1 in timetable[day]) {
       var text = `${dayName[day]} ${hour+1}:00-${hour+2}:00<br>${timetable[day][hour+1]}`;
       element2.innerHTML = text;
-      element2.style.display = "flex";
+      element2.parentElement.style.display = "flex";
     }
   }
 

@@ -232,7 +232,7 @@ a {
   margin-left: 12px;
   font-size: 18px;
   width: fit-content;
-  display: none;
+  display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0 24px;
@@ -244,6 +244,7 @@ a {
   padding: 8px;
   box-shadow: 0 0 0 2px #1a2e5a inset;
   border-radius: 8px;
+  display: none;
 }
 
 .main-header {

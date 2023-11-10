@@ -53,8 +53,7 @@ function getTime() {
     if (hour + 1 in timetable[day]) {
       var text = `${dayName[day]} ${hour+1}:00-${hour+2}:00<br>${timetable[day][hour+1]}`;
       element2.innerHTML = text;
-    } else {
-      element2.style.display = "none";
+      element2.style.display = "flex";
     }
   }
 

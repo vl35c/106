@@ -232,7 +232,7 @@ a {
   margin-left: 12px;
   font-size: 18px;
   width: fit-content;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   gap: 0 24px;
